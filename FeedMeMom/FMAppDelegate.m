@@ -5,22 +5,13 @@
     UIWindow *_window;
 }
 
-@synthesize databasePath = _databasePath;
-
 @synthesize window = _window;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    [self prepareDb];
     return YES;
 }
 
-- (void)prepareDb {
-    NSString *databaseName = @"Customers.db";
-    NSArray *documentPaths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
-    NSString *documentDir = [documentPaths objectAtIndex:0];
-    self.databasePath = [documentDir stringByAppendingPathComponent:databaseName];
-}
 
 - (void)applicationWillResignActive:(UIApplication *)application
 {
