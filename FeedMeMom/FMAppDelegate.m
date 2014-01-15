@@ -40,4 +40,21 @@
     // Saves changes in the application's managed object context before the application terminates.
 }
 
+
++ (UIViewController *)fromStoryboardWithName:(NSString*) name {
+    FMAppDelegate* appDelegate = (FMAppDelegate*)[[UIApplication sharedApplication] delegate];
+    UIViewController *rootController = appDelegate.window.rootViewController;
+    return [rootController.storyboard instantiateViewControllerWithIdentifier:name];
+}
+
++ (UIViewController *)historyController {
+    static UIViewController *historyController = nil;
+    if (historyController == nil) {
+        historyController = [FMAppDelegate fromStoryboardWithName:@"historyController"];
+        historyController.modalTransitionStyle = UIModalTransitionStyleCrossDissolve;
+    }
+    return historyController;
+}
+
+
 @end

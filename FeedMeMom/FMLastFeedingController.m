@@ -1,6 +1,8 @@
 #import "FMLastFeedingController.h"
 #import "UIViewController+JASidePanel.h"
 #import "JASidePanelController.h"
+#import "FMRootController.h"
+#import "FMAppDelegate.h"
 
 @implementation FMLastFeedingController {
 

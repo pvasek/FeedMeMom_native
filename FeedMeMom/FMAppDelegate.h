@@ -8,8 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
+UINavigationController * MainNavigationController;
+
 @interface FMAppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
+
++(UIViewController*) historyController;
 
 @end

@@ -126,7 +126,7 @@ NSString *const InsertSql = @"INSERT INTO FeedingEntry ("
                                    [NSNumber numberWithInt:entry.isLeft],
                                    nil];
         if (result) {
-            entry.id = [NSNumber numberWithInteger:[db lastInsertRowId]];
+            entry.id = [[NSNumber numberWithInteger:[db lastInsertRowId]] integerValue];
         }
     }];
     return result;
