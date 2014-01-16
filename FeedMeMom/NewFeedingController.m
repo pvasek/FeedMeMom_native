@@ -8,10 +8,7 @@
 
 #import "NewFeedingController.h"
 #import "FMFeedingEntry.h"
-
-@interface NewFeedingController ()
-
-@end
+#import "FMDateSelectorController.h"
 
 @implementation NewFeedingController {
     NSDate* _date;
@@ -75,4 +72,19 @@
 - (NSNumber *)rightMinutes {
     return _rightMinutes;
 }
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    [super prepareForSegue:segue sender:sender];
+    if ([segue.identifier isEqualToString: @"selectDate"]) {
+        FMDateSelectorController *dateController = (FMDateSelectorController *)segue.destinationViewController;
+        dateController.date = _date;
+        dateController.done = ^(FMDateSelectorController *ctrl) {
+            [self setDate: ctrl.date];
+        };
+    }
+}
+
+
+
+
 @end

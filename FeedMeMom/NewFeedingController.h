@@ -7,8 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "FMFeedingEntry.h"
 
-@class FMFeedingEntry;
 
 @interface NewFeedingController : UITableViewController
 

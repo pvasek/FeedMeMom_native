@@ -265,7 +265,7 @@
                                                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                     </state>
                                                     <connections>
-                                                        <segue destination="gdk-KN-LLH" kind="push" id="kfh-2I-CQK"/>
+                                                        <segue destination="gdk-KN-LLH" kind="push" identifier="selectDate" id="kfh-2I-CQK"/>
                                                     </connections>
                                                 </button>
                                             </subviews>
@@ -359,7 +359,7 @@
         <!--DateController-->
         <scene sceneID="vjS-gH-5qu">
             <objects>
-                <tableViewController id="gdk-KN-LLH" userLabel="DateController" customClass="FMDateSelectorController" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="dateSelectorController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="gdk-KN-LLH" userLabel="DateController" customClass="FMDateSelectorController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="Fam-d5-Evy">
                         <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
