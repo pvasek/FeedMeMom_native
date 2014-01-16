@@ -7,36 +7,72 @@
 //
 
 #import "NewFeedingController.h"
+#import "FMFeedingEntry.h"
 
 @interface NewFeedingController ()
 
 @end
 
-@implementation NewFeedingController
-
-- (IBAction)cancelClick:(UIBarButtonItem *)sender {
-    [self.navigationController
-            dismissViewControllerAnimated:true completion:^{}];
+@implementation NewFeedingController {
+    NSDate* _date;
+    NSNumber* _leftMinutes;
+    NSNumber* _rightMinutes;
 }
 
-- (id)initWithStyle:(UITableViewStyle)style
-{
-    self = [super initWithStyle:style];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
+@synthesize feeding = _feeding;
+
+
+- (IBAction)cancelClick:(UIBarButtonItem *)sender {
+    [self.navigationController dismissViewControllerAnimated:true completion:^{}];
 }
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
 
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
- 
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    if (_feeding == nil) {
+        [self setDate: [NSDate date]];
+        [self setLeftMinutes:[[NSNumber alloc] initWithInt:0]];
+        [self setRightMinutes:[[NSNumber alloc] initWithInt:0]];
+    }
 }
 
+
+
+-(void)setDate:(NSDate*)value {
+    _date = value;
+    NSString *dateText = [NSDateFormatter
+            localizedStringFromDate:value
+                          dateStyle:kCFDateFormatterMediumStyle
+                          timeStyle:NSDateFormatterShortStyle];
+
+    [_dateButton setTitle:dateText forState:UIControlStateNormal];
+    [_dateButton setTitle:dateText forState:UIControlStateSelected];
+}
+
+-(NSDate*) date {
+    return _date;
+}
+
+-(void)setLeftMinutes:(NSNumber *)leftMinutes {
+    _leftMinutes = leftMinutes;
+    NSString* text = [_leftMinutes stringValue];
+    [_leftButton setTitle:text forState:UIControlStateNormal];
+    [_leftButton setTitle:text forState:UIControlStateSelected];
+}
+
+- (NSNumber *)leftMinutes {
+    return _leftMinutes;
+}
+
+- (void)setRightMinutes:(NSNumber *)rightMinutes {
+    _rightMinutes = rightMinutes;
+    NSString* text = [_leftMinutes stringValue];
+    [_leftButton setTitle:text forState:UIControlStateNormal];
+    [_leftButton setTitle:text forState:UIControlStateSelected];
+}
+
+- (NSNumber *)rightMinutes {
+    return _rightMinutes;
+}
 @end

@@ -16,4 +16,12 @@
     [super viewDidLoad];
 }
 
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    [super prepareForSegue:segue sender:sender];
+
+    if (segue.identifier == @"") {
+        //segue.destinationViewController
+    }
+}
+
 @end

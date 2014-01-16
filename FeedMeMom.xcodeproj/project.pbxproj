@@ -12,6 +12,7 @@
 		C5CB62077CD76E84EADE899C /* FMAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C5CB67B0E7B237F02E2B3A50 /* FMAppDelegate.m */; };
 		C5CB6287AAEBE5B7CB705B87 /* JASidePanelController.m in Sources */ = {isa = PBXBuildFile; fileRef = C5CB68F5DFE520786D1FAD70 /* JASidePanelController.m */; };
 		C5CB638BFDD61B4137D3D8A2 /* FMSideMenuController.m in Sources */ = {isa = PBXBuildFile; fileRef = C5CB67145EBF484ACD537AEB /* FMSideMenuController.m */; };
+		C5CB6426814421E2177BB206 /* FMDateSelectorController.m in Sources */ = {isa = PBXBuildFile; fileRef = C5CB65B71A9B930B4C9D1E1E /* FMDateSelectorController.m */; };
 		C5CB64534F49BEAC0B0D6F2F /* UIViewController+JASidePanel.m in Sources */ = {isa = PBXBuildFile; fileRef = C5CB6556521A20B7EA248149 /* UIViewController+JASidePanel.m */; };
 		C5CB679F3E7B19745C5B6B2A /* FMHistoryRootController.m in Sources */ = {isa = PBXBuildFile; fileRef = C5CB650EFBFC0F130A7C0550 /* FMHistoryRootController.m */; };
 		C5CB6AFFB70F8F9E57C9FDD0 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = C5CB67E7DA44939340C5FC45 /* Podfile */; };
@@ -52,6 +53,7 @@
 		C5CB650EFBFC0F130A7C0550 /* FMHistoryRootController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMHistoryRootController.m; sourceTree = "<group>"; };
 		C5CB6556521A20B7EA248149 /* UIViewController+JASidePanel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+JASidePanel.m"; sourceTree = "<group>"; };
 		C5CB656412B693D2DDDB43F2 /* JASidePanelController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JASidePanelController.h; sourceTree = "<group>"; };
+		C5CB65B71A9B930B4C9D1E1E /* FMDateSelectorController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDateSelectorController.m; sourceTree = "<group>"; };
 		C5CB667CFE0B2B319DF2FD4F /* FMFeedingEntry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMFeedingEntry.h; sourceTree = "<group>"; };
 		C5CB6702334A3C7250B76998 /* FMLastFeedingController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMLastFeedingController.h; sourceTree = "<group>"; };
 		C5CB67145EBF484ACD537AEB /* FMSideMenuController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMSideMenuController.m; sourceTree = "<group>"; };
@@ -66,6 +68,7 @@
 		C5CB6BE2F53CC01B1A7A93D2 /* MainStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MainStoryboard.storyboard; sourceTree = "<group>"; };
 		C5CB6CADCB26AB596557F54C /* NewFeedingController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewFeedingController.m; sourceTree = "<group>"; };
 		C5CB6D9ED85CC9B00EF41BC4 /* FMLastFeedingController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMLastFeedingController.m; sourceTree = "<group>"; };
+		C5CB6E00DD1C603300E63C6E /* FMDateSelectorController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDateSelectorController.h; sourceTree = "<group>"; };
 		C5CB6ECF598EFE3CFC9ED2D6 /* en */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = en; path = InfoPlist.strings; sourceTree = "<group>"; };
 		C5CB6FE0F62EA4850072A78C /* FMRepository.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMRepository.m; sourceTree = "<group>"; };
 		F00F60A1188492C8004B0F63 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
@@ -197,6 +200,8 @@
 				C5CB62D612E5ECDDDA33FAE7 /* FMSideMenuController.h */,
 				C5CB650EFBFC0F130A7C0550 /* FMHistoryRootController.m */,
 				C5CB6A3ABA7BA0BDCC1B77B3 /* FMHistoryRootController.h */,
+				C5CB65B71A9B930B4C9D1E1E /* FMDateSelectorController.m */,
+				C5CB6E00DD1C603300E63C6E /* FMDateSelectorController.h */,
 			);
 			path = FeedMeMom;
 			sourceTree = "<group>";
@@ -375,6 +380,7 @@
 				C5CB64534F49BEAC0B0D6F2F /* UIViewController+JASidePanel.m in Sources */,
 				C5CB638BFDD61B4137D3D8A2 /* FMSideMenuController.m in Sources */,
 				C5CB679F3E7B19745C5B6B2A /* FMHistoryRootController.m in Sources */,
+				C5CB6426814421E2177BB206 /* FMDateSelectorController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

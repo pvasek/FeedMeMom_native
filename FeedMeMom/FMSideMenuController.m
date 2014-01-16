@@ -15,9 +15,9 @@
 
     if (indexPath.row == 0) {
 
-        [self.sidePanelController showCenterPanelAnimated:false];
+        [self.sidePanelController showCenterPanelAnimated:YES];
         UIViewController *history = [FMAppDelegate historyController];
-        [MainNavigationController pushViewController:history animated:YES];
+        [MainNavigationController pushViewController:history animated:NO];
     }
 }
 
