@@ -14,4 +14,6 @@
 - (FMFeedingEntry *)lastFeeding;
 
 - (BOOL)insertFeeding:(FMFeedingEntry *)entry;
+
+- (void)updateFeeding:(FMFeedingEntry *)entry;
 @end

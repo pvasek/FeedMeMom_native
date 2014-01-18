@@ -33,6 +33,31 @@
 @synthesize rightStartTime = _rightStartTime;
 @synthesize pausedAt = _pausedAt;
 @synthesize isLeft = _isLeft;
+
+- (int)leftBreastLengthMinutes {
+    return _leftBreastLengthSeconds / 60;
+}
+
+- (void)setLeftBreastLengthMinutes:(int)leftBreastLengthMinutes {
+    _leftBreastLengthSeconds = leftBreastLengthMinutes * 60;
+
+}
+
+- (int)rightBreastLengthMinutes {
+    return _rightBreastLengthSeconds / 60;
+}
+
+- (int)totalMinutes {
+    return (_leftBreastLengthSeconds+_rightBreastLengthSeconds) / 60;
+}
+
+
+- (void)setRightBreastLengthMinutes:(int)rightBreastLengthMinutes {
+    _rightBreastLengthSeconds = rightBreastLengthMinutes * 60;
+
+}
+
+
 @end
 
 

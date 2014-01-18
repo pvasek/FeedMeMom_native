@@ -25,4 +25,7 @@
 @property int isLeft;
 
 
+@property(nonatomic) int leftBreastLengthMinutes;
+@property(nonatomic) int rightBreastLengthMinutes;
+@property(nonatomic, readonly) int totalMinutes;
 @end

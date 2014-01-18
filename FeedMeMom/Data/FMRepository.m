@@ -47,18 +47,15 @@ NSString *const InsertSql = @"INSERT INTO FeedingEntry ("
     self = [super init];
     if (self) {
         _debug = isDebug;
-        if (path != nil) {
+        if (path == nil) {
             _dbPath = path;
         } else {
             NSArray *docPaths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
             NSString *documentsDir = [docPaths objectAtIndex:0];
             _dbPath = [documentsDir   stringByAppendingPathComponent:@"UserDatabase4.sqlite"];
         }
-
         [self createDb];
-
     }
-
     return self;
 }
 
@@ -132,4 +129,7 @@ NSString *const InsertSql = @"INSERT INTO FeedingEntry ("
     return result;
 }
 
+- (void)updateFeeding:(FMFeedingEntry *)entry {
+
+}
 @end

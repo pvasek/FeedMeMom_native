@@ -8,7 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
+@class FMRepository;
+
 UINavigationController * MainNavigationController;
+FMRepository *Repository;
 
 @interface FMAppDelegate : UIResponder <UIApplicationDelegate>
 

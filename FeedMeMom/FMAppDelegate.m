@@ -1,4 +1,5 @@
 #import "FMAppDelegate.h"
+#import "FMRepository.h"
 
 @implementation FMAppDelegate {
 @private
@@ -9,6 +10,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    Repository = [[FMRepository alloc] initWithDbPath:@"feedingmom_data" debug:true];
     return YES;
 }
 
