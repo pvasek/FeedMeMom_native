@@ -2,10 +2,6 @@
 
 
 @implementation FMDateSelectorController {
-
-@private
-    NSDate* _date;
-    void (^_done)();
 }
 
 @synthesize done = _done;
@@ -21,7 +17,7 @@
 - (void)viewWillDisappear:(BOOL)animated {
     [super viewWillDisappear:animated];
     if (_done != nil) {
-        _done();
+        _done(self);
     }
 }
 

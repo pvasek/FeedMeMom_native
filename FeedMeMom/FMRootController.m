@@ -10,7 +10,7 @@
     [super awakeFromNib];
     [self setLeftPanel:[self.storyboard instantiateViewControllerWithIdentifier:@"sideMenuController"]];
     UIViewController *mainNavigationController = [self.storyboard instantiateViewControllerWithIdentifier:@"mainNavigationController"];
-    MainNavigationController = mainNavigationController;
+    MainNavigationController = (UINavigationController*)mainNavigationController;
     [self setCenterPanel:mainNavigationController];
 }
 

@@ -1,14 +1,5 @@
-//
-//  FeedingEntry.h
-//  app
-//
-//  Created by Pavel Vašek on 11/01/14.
-//  Copyright (c) 2014 Pavel Vašek. All rights reserved.
-//
-
 #import <Foundation/Foundation.h>
-#import <CoreData/CoreData.h>
-
+#import "FMAgo.h"
 
 @interface FMFeedingEntry : NSObject
 
@@ -28,4 +19,9 @@
 @property(nonatomic) int leftBreastLengthMinutes;
 @property(nonatomic) int rightBreastLengthMinutes;
 @property(nonatomic, readonly) int totalMinutes;
+
+
+- (FMAgo *)ago;
+- (void)setNowForTestDate:(NSDate *)date;
+
 @end

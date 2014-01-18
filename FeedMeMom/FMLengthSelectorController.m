@@ -19,16 +19,16 @@
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     if (_prepare != nil) {
-        _prepare();
+        _prepare(self);
     }
 }
 
 
-- (NSInteger *)value {
+- (NSInteger)value {
     return [_pickupSelector selectedRowInComponent:0];
 }
 
-- (void)setValue:(NSInteger *)value {
+- (void)setValue:(NSInteger)value {
     [_pickupSelector reloadAllComponents];
     [_pickupSelector selectRow:value inComponent:0 animated:false];
 }
@@ -36,7 +36,7 @@
 - (void)viewWillDisappear:(BOOL)animated {
     [super viewWillDisappear:animated];
     if (_done != nil) {
-        _done();
+        _done(self);
     }
 }
 

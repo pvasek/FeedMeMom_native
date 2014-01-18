@@ -224,6 +224,8 @@
                     </navigationItem>
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
                     <connections>
+                        <outlet property="lblAgo" destination="YYq-cy-zLh" id="hqo-1J-Qm6"/>
+                        <outlet property="lblAgoUnits" destination="Iko-Cc-gA0" id="wLt-hy-mWY"/>
                         <outlet property="lblTotalLength" destination="zhO-q7-mDg" id="fGW-UA-cCN"/>
                     </connections>
                 </viewController>

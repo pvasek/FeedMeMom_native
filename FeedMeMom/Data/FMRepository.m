@@ -21,18 +21,39 @@ NSString *const CreateDbSql = @"CREATE TABLE IF NOT EXISTS FeedingEntry("
 
 NSString *const SelectLastSql = @"SELECT * FROM FeedingEntry ORDER BY Date DESC LIMIT 1";
 
-NSString *const InsertSql = @"INSERT INTO FeedingEntry ("
-        "Type, "
-        "Name, "
-        "Date, "
-        "Value, "
-        "LeftBreastLengthSeconds,"
-        "RightBreastLengthSeconds,"
-        "LeftStartTime,"
-        "RightStartTime,"
-        "PausedAt,"
-        "IsLeft"
-    ") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+NSString *const InsertSql = @"INSERT INTO FeedingEntry ( \
+        Type,\
+        Name,\
+        Date,\
+        Value,\
+        LeftBreastLengthSeconds,\
+        RightBreastLengthSeconds,\
+        LeftStartTime,\
+        RightStartTime,\
+        PausedAt,\
+        IsLeft\
+    ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+
+NSString *const UpdateSql = @"UPDATE FeedingEntry SET\
+        Type=:type,\
+        Name=:name,\
+        Date=:date,\
+        Value=:value,\
+        LeftBreastLengthSeconds=:leftBreastLengthSeconds,\
+        RightBreastLengthSeconds=:rightBreastLengthSeconds,\
+        LeftStartTime=:leftStartTime,\
+        RightStartTime=:rightStartTime,\
+        PausedAt=:pausedAt,\
+        IsLeft=:isLeft\
+        WHERE Id = :id";
+
+
+void addKeyValue(NSMutableDictionary *dict, NSString *key, NSObject *obj) {
+    if (obj == nil) {
+        obj = [NSNull null];
+    }
+    [dict setObject:obj forKey:key];
+}
 
 @implementation FMRepository {
     FMDatabase *_db;
@@ -129,7 +150,25 @@ NSString *const InsertSql = @"INSERT INTO FeedingEntry ("
     return result;
 }
 
-- (void)updateFeeding:(FMFeedingEntry *)entry {
-
+- (BOOL)updateFeeding:(FMFeedingEntry *)entry {
+    __block BOOL result = false;
+    [self run:^(FMDatabase *db) {
+        NSMutableDictionary *params = [NSMutableDictionary dictionary];
+        addKeyValue(params, @"id", [NSNumber numberWithInt:entry.id]);
+        addKeyValue(params, @"type", [NSNumber numberWithInt:entry.type]);
+        addKeyValue(params, @"name", entry.name);
+        addKeyValue(params, @"date", entry.date);
+        addKeyValue(params, @"value", [NSNumber numberWithInt:entry.value]);
+        addKeyValue(params, @"leftBreastLengthSeconds", [NSNumber numberWithInt:entry.leftBreastLengthSeconds]);
+        addKeyValue(params, @"rightBreastLengthSeconds", [NSNumber numberWithInt:entry.rightBreastLengthSeconds]);
+        addKeyValue(params, @"leftStartTime", entry.leftStartTime);
+        addKeyValue(params, @"rightStartTime", entry.rightStartTime);
+        addKeyValue(params, @"pausedAt", entry.pausedAt);
+        addKeyValue(params, @"isLeft", [NSNumber numberWithInt:entry.isLeft]);
+        result = [db executeUpdate:UpdateSql withParameterDictionary:params];
+    }];
+    return result;
 }
+
+
 @end

@@ -9,9 +9,6 @@
     int _rightMinutes;
 }
 
-@synthesize feeding = _feeding;
-
-
 - (IBAction)cancelClick:(UIBarButtonItem *)sender {
     //[self.navigationController dismissViewControllerAnimated:true completion:^{}];
     [self.navigationController popToRootViewControllerAnimated:true];
@@ -24,21 +21,12 @@
     [self.navigationController dismissViewControllerAnimated:true completion:^{}];
 }
 
-- (void)viewDidLoad
-{
-    [super viewDidLoad];
-
-    if (_feeding == nil) {
-        [self setDate: [NSDate date]];
-        [self setLeftMinutes: 0];
-        [self setRightMinutes: 0];
-    } else {
-        [self setDate: _feeding.date];
-        [self setLeftMinutes:_feeding.leftBreastLengthMinutes];
-        [self setRightMinutes:_feeding.rightBreastLengthMinutes];
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    if (_prepare != nil) {
+        _prepare(self);
     }
 }
-
 
 
 -(void)setDate:(NSDate*)value {
@@ -77,31 +65,31 @@
     [super prepareForSegue:segue sender:sender];
 
     if ([segue.identifier isEqualToString: @"selectDate"]) {
-        FMDateSelectorController *ctrl = (FMDateSelectorController *)segue.destinationViewController;
-        ctrl.date = _date;
-        ctrl.done = ^() {
+        FMDateSelectorController *controller = (FMDateSelectorController *)segue.destinationViewController;
+        controller.date = _date;
+        controller.done = ^(FMDateSelectorController *ctrl) {
             [self setDate: ctrl.date];
         };
     }
 
     if ([segue.identifier isEqualToString: @"selectLeft"]) {
-        FMLengthSelectorController *ctrl = (FMLengthSelectorController *)segue.destinationViewController;
-        ctrl.title = NSLocalizedString(@"Left", nil);
-        ctrl.prepare = ^() {
+        FMLengthSelectorController *controller = (FMLengthSelectorController *)segue.destinationViewController;
+        controller.title = NSLocalizedString(@"Left", nil);
+        controller.prepare = ^(FMLengthSelectorController *ctrl) {
             ctrl.value = _leftMinutes;
         };
-        ctrl.done = ^() {
+        controller.done = ^(FMLengthSelectorController *ctrl) {
             [self setLeftMinutes:ctrl.value];
         };
     }
 
     if ([segue.identifier isEqualToString: @"selectRight"]) {
-        FMLengthSelectorController *ctrl = (FMLengthSelectorController *)segue.destinationViewController;
-        ctrl.title = NSLocalizedString(@"Right", nil);
-        ctrl.prepare = ^() {
+        FMLengthSelectorController *controller = (FMLengthSelectorController *)segue.destinationViewController;
+        controller.title = NSLocalizedString(@"Right", nil);
+        controller.prepare = ^(FMLengthSelectorController *ctrl) {
             ctrl.value = _rightMinutes;
         };
-        ctrl.done = ^() {
+        controller.done = ^(FMLengthSelectorController *ctrl) {
             [self setRightMinutes:ctrl.value];
         };
     }

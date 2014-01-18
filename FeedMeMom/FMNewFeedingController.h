@@ -12,8 +12,8 @@
 
 @interface FMNewFeedingController : UITableViewController
 
-@property (nonatomic,strong) FMFeedingEntry * feeding;
-@property(nonatomic, copy) void (^doneOk)();
+@property(nonatomic, copy) void (^doneOk)(FMNewFeedingController *controller);
+@property(nonatomic, copy) void (^prepare)(FMNewFeedingController *controller);
 
 @property (nonatomic,strong) NSDate* date;
 @property (nonatomic) int leftMinutes;
