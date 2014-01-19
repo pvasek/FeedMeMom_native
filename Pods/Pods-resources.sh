@@ -52,7 +52,7 @@ if [[ -n "${WRAPPER_EXTENSION}" ]] && [ `xcrun --find actool` ] && [ `find . -na
 then
   case "${TARGETED_DEVICE_FAMILY}" in 
     1,2)
-      TARGET_DEVICE_ARGS="--_target-device ipad --target-device iphone"
+      TARGET_DEVICE_ARGS="--target-device ipad --target-device iphone"
       ;;
     1)
       TARGET_DEVICE_ARGS="--target-device iphone"

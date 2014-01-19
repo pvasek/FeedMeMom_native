@@ -3,7 +3,7 @@
 #import "JASidePanelController.h"
 #import "FMRootController.h"
 #import "FMAppDelegate.h"
-#import "FMNewFeedingController.h"
+#import "FMEditFeedingController.h"
 #import "FMRepository.h"
 
 @implementation FMLastFeedingController {
@@ -33,39 +33,13 @@
     [super prepareForSegue:segue sender:sender];
 
     if ([segue.identifier isEqualToString: @"addFeeding"]) {
-        FMNewFeedingController *controller = (FMNewFeedingController*)segue.destinationViewController;
-        controller.prepare = ^(FMNewFeedingController* ctrl) {
-            ctrl.date = [NSDate date];
-            ctrl.leftMinutes = 0;
-            ctrl.rightMinutes = 0;
-            ctrl.prepare = nil;
-        };
-        controller.doneOk = ^(FMNewFeedingController* ctrl) {
-            FMFeedingEntry *entry = [[FMFeedingEntry alloc] init];
-            entry.date = ctrl.date;
-            entry.rightBreastLengthMinutes = ctrl.rightMinutes;
-            entry.leftBreastLengthMinutes = ctrl.leftMinutes;
-            [Repository insertFeeding:entry];
-            [self.navigationController popToViewController:self animated:true];
-        };
+        FMEditFeedingController *controller = (FMEditFeedingController *)segue.destinationViewController;
+        [controller setFeeding:[[FMFeedingEntry alloc] init]];
     }
 
     if ([segue.identifier isEqualToString: @"editFeeding"] && _lastFeeding) {
-        FMNewFeedingController *controller = (FMNewFeedingController*)segue.destinationViewController;
-        controller.prepare = ^(FMNewFeedingController* ctrl) {
-            ctrl.date = _lastFeeding.date;
-            ctrl.leftMinutes = _lastFeeding.leftBreastLengthMinutes;
-            ctrl.rightMinutes = _lastFeeding.rightBreastLengthMinutes;
-            ctrl.prepare = nil;
-        };
-        controller.doneOk = ^(FMNewFeedingController* ctrl) {
-            FMFeedingEntry *entry = _lastFeeding;
-            entry.date = ctrl.date;
-            entry.rightBreastLengthMinutes = ctrl.rightMinutes;
-            entry.leftBreastLengthMinutes = ctrl.leftMinutes;
-            [Repository updateFeeding:entry];
-            [self.navigationController popToViewController:self animated:true];
-        };
+        FMEditFeedingController *controller = (FMEditFeedingController *)segue.destinationViewController;
+        [controller setFeeding:_lastFeeding];
     }
 }
 

@@ -16,4 +16,6 @@
 - (BOOL)insertFeeding:(FMFeedingEntry *)entry;
 
 - (BOOL)updateFeeding:(FMFeedingEntry *)entry;
+
+- (void)deleteFeedingWithId:(int)id1;
 @end

@@ -19,9 +19,9 @@ NSString *const CreateDbSql = @"CREATE TABLE IF NOT EXISTS FeedingEntry("
         "    IsLeft integer"
         ")";
 
-NSString *const SelectLastSql = @"SELECT * FROM FeedingEntry ORDER BY Date DESC LIMIT 1";
+NSString *const FeedingSelectLastSql = @"SELECT * FROM FeedingEntry ORDER BY Date DESC LIMIT 1";
 
-NSString *const InsertSql = @"INSERT INTO FeedingEntry ( \
+NSString *const FeedingInsertSql = @"INSERT INTO FeedingEntry ( \
         Type,\
         Name,\
         Date,\
@@ -34,7 +34,7 @@ NSString *const InsertSql = @"INSERT INTO FeedingEntry ( \
         IsLeft\
     ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
 
-NSString *const UpdateSql = @"UPDATE FeedingEntry SET\
+NSString *const FeedingUpdateSql = @"UPDATE FeedingEntry SET\
         Type=:type,\
         Name=:name,\
         Date=:date,\
@@ -47,6 +47,8 @@ NSString *const UpdateSql = @"UPDATE FeedingEntry SET\
         IsLeft=:isLeft\
         WHERE Id = :id";
 
+
+NSString *const FeedingDeleteSql = @"DELETE FROM FeedingEntry WHERE Id = ?";
 
 void addKeyValue(NSMutableDictionary *dict, NSString *key, NSObject *obj) {
     if (obj == nil) {
@@ -105,7 +107,7 @@ void addKeyValue(NSMutableDictionary *dict, NSString *key, NSObject *obj) {
 - (FMFeedingEntry *)lastFeeding {
     __block FMFeedingEntry *result = nil;
     [self run:^(FMDatabase *db) {
-        FMResultSet *row = [db executeQuery:SelectLastSql];
+        FMResultSet *row = [db executeQuery:FeedingSelectLastSql];
         while ([row next])
         {
             result = [[FMFeedingEntry alloc] init];
@@ -131,7 +133,7 @@ void addKeyValue(NSMutableDictionary *dict, NSString *key, NSObject *obj) {
     __block BOOL result = false;
     [self run:^(FMDatabase *db) {
 
-        result = [db executeUpdate:InsertSql,
+        result = [db executeUpdate:FeedingInsertSql,
                                    [NSNumber numberWithInt:entry.type],
                                    entry.name,
                                    entry.date,
@@ -165,10 +167,15 @@ void addKeyValue(NSMutableDictionary *dict, NSString *key, NSObject *obj) {
         addKeyValue(params, @"rightStartTime", entry.rightStartTime);
         addKeyValue(params, @"pausedAt", entry.pausedAt);
         addKeyValue(params, @"isLeft", [NSNumber numberWithInt:entry.isLeft]);
-        result = [db executeUpdate:UpdateSql withParameterDictionary:params];
+        result = [db executeUpdate:FeedingUpdateSql withParameterDictionary:params];
     }];
     return result;
 }
 
+- (void)deleteFeedingWithId:(int) id {
+    [self run:^(FMDatabase *db) {
+        [db executeUpdate:FeedingDeleteSql, [[NSNumber alloc] initWithInt:id]];
+    }];
+}
 
 @end

@@ -14,6 +14,7 @@
     NSDate *_pausedAt;
     int _isLeft;
     NSDate *_testNow;
+    BOOL _isNew;
 }
 
 @synthesize id = _id;
@@ -28,6 +29,9 @@
 @synthesize pausedAt = _pausedAt;
 @synthesize isLeft = _isLeft;
 
+- (BOOL)isNew {
+    return _id == 0;
+}
 - (int)leftBreastLengthMinutes {
     return _leftBreastLengthSeconds / 60;
 }

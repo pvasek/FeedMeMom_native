@@ -16,6 +16,7 @@
 @property int isLeft;
 
 
+@property(nonatomic,readonly) BOOL isNew;
 @property(nonatomic) int leftBreastLengthMinutes;
 @property(nonatomic) int rightBreastLengthMinutes;
 @property(nonatomic, readonly) int totalMinutes;

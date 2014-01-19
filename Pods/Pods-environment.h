@@ -24,3 +24,9 @@
 #define COCOAPODS_VERSION_MINOR_FMDB_standard 1
 #define COCOAPODS_VERSION_PATCH_FMDB_standard 0
 
+// Lambda-Alert
+#define COCOAPODS_POD_AVAILABLE_Lambda_Alert
+#define COCOAPODS_VERSION_MAJOR_Lambda_Alert 1
+#define COCOAPODS_VERSION_MINOR_Lambda_Alert 0
+#define COCOAPODS_VERSION_PATCH_Lambda_Alert 0
+

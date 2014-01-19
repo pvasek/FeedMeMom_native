@@ -1,12 +1,16 @@
-#import "FMNewFeedingController.h"
+#import "FMEditFeedingController.h"
 #import "FMFeedingEntry.h"
 #import "FMDateSelectorController.h"
 #import "FMLengthSelectorController.h"
+#import "FMAppDelegate.h"
+#import "FMRepository.h"
+#import "CCAlertView.h"
 
-@implementation FMNewFeedingController {
+@implementation FMEditFeedingController {
     NSDate* _date;
     int _leftMinutes;
     int _rightMinutes;
+    FMFeedingEntry *_feeding;
 }
 
 - (IBAction)cancelClick:(UIBarButtonItem *)sender {
@@ -21,11 +25,29 @@
     [self.navigationController dismissViewControllerAnimated:true completion:^{}];
 }
 
+- (IBAction)deleteFeeding:(id)sender {
+    if (!_feeding.isNew) {
+        CCAlertView *alert = [[CCAlertView alloc]
+                initWithTitle:@""
+                      message:NSLocalizedString(@"Do you want to delete this feeding?", nil)];
+
+        [alert addButtonWithTitle:NSLocalizedString(@"Yes", nil) block:^{
+            [Repository deleteFeedingWithId:_feeding.id];
+            [self.navigationController popToRootViewControllerAnimated:true];
+        }];
+        [alert addButtonWithTitle:NSLocalizedString(@"No", nil) block:^{
+        }];
+        [alert show];
+    }
+}
+
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     if (_prepare != nil) {
         _prepare(self);
     }
+
+    _btnDeleteFeeding.hidden = _feeding.isNew;
 }
 
 
@@ -37,6 +59,30 @@
                           timeStyle:NSDateFormatterShortStyle];
 
 }
+
+
+- (void) setFeeding:(FMFeedingEntry*) feeding {
+    _feeding = feeding;
+    _prepare = ^(FMEditFeedingController * ctrl) {
+        ctrl.date = _feeding.date;
+        ctrl.leftMinutes = _feeding.leftBreastLengthMinutes;
+        ctrl.rightMinutes = _feeding.rightBreastLengthMinutes;
+        ctrl.prepare = nil;
+    };
+    _doneOk = ^(FMEditFeedingController * ctrl) {
+        _feeding.date = ctrl.date;
+        _feeding.rightBreastLengthMinutes = ctrl.rightMinutes;
+        _feeding.leftBreastLengthMinutes = ctrl.leftMinutes;
+
+        if (_feeding.isNew) {
+            [Repository insertFeeding:_feeding];
+        } else {
+            [Repository updateFeeding:_feeding];
+        }
+        [self.navigationController popToRootViewControllerAnimated:YES];
+    };    
+}
+
 
 -(NSDate*) date {
     return _date;

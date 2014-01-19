@@ -4,11 +4,14 @@ PODS:
   - FMDB/common (2.1)
   - FMDB/standard (2.1):
     - FMDB/common
+  - Lambda-Alert (1.0.0)
 
 DEPENDENCIES:
   - FMDB
+  - Lambda-Alert
 
 SPEC CHECKSUMS:
   FMDB: 3fd5aaf632ca4ed39e3f101e0398504e6d5b0918
+  Lambda-Alert: 16cac975568b71cd2940df8ca9cadb87882baae2
 
 COCOAPODS: 0.29.0

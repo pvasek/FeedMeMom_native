@@ -7,209 +7,315 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		18FAB26BD91C4B71BAF0D7A7 /* FMDatabaseAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 57E804D4E78F44C39F33AB67 /* FMDatabaseAdditions.m */; };
-		2A9C1C7430BE40648409A9D3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB041427040A4154A99DCB4A /* Foundation.framework */; };
-		3D379D45234041C5AB5729CB /* FMDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = 82ADFE1F11E14FBAA214B194 /* FMDatabase.m */; };
-		40D00C2E7AF34E49BD158EB6 /* FMDatabasePool.m in Sources */ = {isa = PBXBuildFile; fileRef = D59A5B8DC8344A57B9884BB4 /* FMDatabasePool.m */; };
-		6D4D1A7B6AD54F4CAD8781D9 /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = E0BF4029C4304BC8B85322B5 /* FMResultSet.m */; };
-		6E9A2906B6E146B78E19212C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB041427040A4154A99DCB4A /* Foundation.framework */; };
-		7771D1880DB846F1BC10EC27 /* Pods-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 468EF3D033484CEAB4A8F8A9 /* Pods-dummy.m */; };
-		8409269C68FD4CBBAEA3769D /* FMDatabaseQueue.h in Headers */ = {isa = PBXBuildFile; fileRef = 7995193A5EB54937BA54E30A /* FMDatabaseQueue.h */; };
-		B140CDE61BF84C279AB68C1D /* FMDatabase.h in Headers */ = {isa = PBXBuildFile; fileRef = 0AC85BF9294845889ABAF08C /* FMDatabase.h */; };
-		CF5ADCCE205645CE9995082F /* Pods-FMDB-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 9127E78988F24BC2AAE36212 /* Pods-FMDB-dummy.m */; };
-		D7FC81D0B8C2410088F9EB8F /* FMResultSet.h in Headers */ = {isa = PBXBuildFile; fileRef = B064201EB13D43D4993A758D /* FMResultSet.h */; };
-		E1A9D1F465D046C1847C5C63 /* FMDatabasePool.h in Headers */ = {isa = PBXBuildFile; fileRef = 149DDE8DAD23424794B26392 /* FMDatabasePool.h */; };
-		E97A1CC697564CB1A03B0F0E /* libPods-FMDB.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ABF3ADB198AF4111B7154B7B /* libPods-FMDB.a */; };
-		F125F404D3884AD4B67AE9DE /* FMDatabaseQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 9864C67096EB4520850DDD9B /* FMDatabaseQueue.m */; };
-		FB7A5B4395304BAFB427B27E /* FMDatabaseAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = F3E50C486782487FB5E4F140 /* FMDatabaseAdditions.h */; };
+		025CC0906EFB41A48B9EC314 /* Pods-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A710EF97381E48E687C1D6A8 /* Pods-dummy.m */; };
+		13C84AF766E64C79A8CD7BF6 /* CCActionSheet.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C6EE1E4BA1742FB8B2517F6 /* CCActionSheet.m */; settings = {COMPILER_FLAGS = "-fobjc-arc -DOS_OBJECT_USE_OBJC=0"; }; };
+		184EE10E5CBC487B9FD88E3F /* Pods-FMDB-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 89F38E18721642709A4C34EA /* Pods-FMDB-dummy.m */; };
+		1D02D6F70C3345CAA351E2BC /* FMDatabaseAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A00BDE7503548E7A53CC894 /* FMDatabaseAdditions.m */; };
+		2304D13E424B452DB9105FC8 /* CCAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = A485D4EFDBC3479296124312 /* CCAlertView.m */; settings = {COMPILER_FLAGS = "-fobjc-arc -DOS_OBJECT_USE_OBJC=0"; }; };
+		2AA6BD7B0D8444EBB7D2C3B7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 47ED3DD42ADD404DB2C00561 /* Foundation.framework */; };
+		2E915598338F4CAB8FC5963E /* FMResultSet.h in Headers */ = {isa = PBXBuildFile; fileRef = 5CDA1917470546209D6313DC /* FMResultSet.h */; };
+		300EC17A26564AE2B3B62E9E /* libPods-FMDB.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B202472F71AD4F7F8C6FAD74 /* libPods-FMDB.a */; };
+		4149EFFA224F4EDE92087BBA /* FMDatabasePool.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B1FB3FF910C4CEAB599DA3F /* FMDatabasePool.m */; };
+		57B292AFB4F24DD3B85A880D /* CCActionSheet.h in Headers */ = {isa = PBXBuildFile; fileRef = 08D3D56104F5468FB29B64E5 /* CCActionSheet.h */; };
+		613E1FB6241A4857948CC472 /* FMDatabasePool.h in Headers */ = {isa = PBXBuildFile; fileRef = FB7347F8A9B647E3AF88161D /* FMDatabasePool.h */; };
+		6756B080D5E44B2D8AD9E018 /* CCAlertView.h in Headers */ = {isa = PBXBuildFile; fileRef = 72222FCCC702409ABDCA47DD /* CCAlertView.h */; };
+		7FAAEA5410F54701BB01D5BE /* FMDatabaseQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 1677B94E8723459C95977939 /* FMDatabaseQueue.m */; };
+		84B18989FD48466885623C43 /* FMDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = 24420DDFE43140D5A2270B28 /* FMDatabase.m */; };
+		84F100F8310B457AA3E5BF34 /* Pods-Lambda-Alert-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 050D7AE1DA7F48B9AEEE5185 /* Pods-Lambda-Alert-dummy.m */; };
+		9A8CF57B49334B888ABF84CE /* FMDatabaseAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = B83C267B651D4153B92078A4 /* FMDatabaseAdditions.h */; };
+		C3775B1315A042E49C57E5F7 /* FMDatabase.h in Headers */ = {isa = PBXBuildFile; fileRef = E3B4320E989C44A2AD117850 /* FMDatabase.h */; };
+		C60D7403D26A4250BEB0D7DC /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 512F7EA3396943679787062B /* CoreGraphics.framework */; };
+		CC3A9FBCB0FF49068C098E65 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 47ED3DD42ADD404DB2C00561 /* Foundation.framework */; };
+		CD8C54DDC58A4BB0B2DFAFC3 /* FMDatabaseQueue.h in Headers */ = {isa = PBXBuildFile; fileRef = B7819D0201B045E9BE671225 /* FMDatabaseQueue.h */; };
+		DCD772E6F8694836977F4ACB /* libPods-Lambda-Alert.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4ABB592305E741AD9DE42315 /* libPods-Lambda-Alert.a */; };
+		EDA35E0E928B4C59A2678986 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 47ED3DD42ADD404DB2C00561 /* Foundation.framework */; };
+		F9EDCA3470C54A0F9DA87CE5 /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 62214EB92EA6485CAA398C89 /* FMResultSet.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		2BDB6D82675A498F95C121A2 /* PBXContainerItemProxy */ = {
+		BDC25C0722E5487B979A8743 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = F6FF5A594C6944CE80DDAC8C /* Project object */;
+			containerPortal = 39CCBEAE731746189FC553D0 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = B9EC1EAFBE824E8995230A53;
+			remoteGlobalIDString = CD455317DAAC4ECEBF85581D;
 			remoteInfo = "Pods-FMDB";
+		};
+		FFB503890DBA43B3908ACF2D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 39CCBEAE731746189FC553D0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4FD434542F9E4EA292EA8A35;
+			remoteInfo = "Pods-Lambda-Alert";
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0AC85BF9294845889ABAF08C /* FMDatabase.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FMDatabase.h; path = src/FMDatabase.h; sourceTree = "<group>"; };
-		134B3F5515CA4DF49835AFCB /* Pods-FMDB-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-FMDB-prefix.pch"; sourceTree = "<group>"; };
-		149DDE8DAD23424794B26392 /* FMDatabasePool.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FMDatabasePool.h; path = src/FMDatabasePool.h; sourceTree = "<group>"; };
-		16C00B8D210143D5A0897D62 /* Pods-FMDB-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-FMDB-Private.xcconfig"; sourceTree = "<group>"; };
-		3FC84A197F6C44369E757D45 /* Pods-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-resources.sh"; sourceTree = "<group>"; };
-		468EF3D033484CEAB4A8F8A9 /* Pods-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-dummy.m"; sourceTree = "<group>"; };
-		57E804D4E78F44C39F33AB67 /* FMDatabaseAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FMDatabaseAdditions.m; path = src/FMDatabaseAdditions.m; sourceTree = "<group>"; };
-		6B8A401258384348B1CD8C79 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		7995193A5EB54937BA54E30A /* FMDatabaseQueue.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FMDatabaseQueue.h; path = src/FMDatabaseQueue.h; sourceTree = "<group>"; };
-		7A0E3E6658D14992AC121034 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Pods.xcconfig; sourceTree = "<group>"; };
-		82ADFE1F11E14FBAA214B194 /* FMDatabase.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FMDatabase.m; path = src/FMDatabase.m; sourceTree = "<group>"; };
-		9127E78988F24BC2AAE36212 /* Pods-FMDB-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-FMDB-dummy.m"; sourceTree = "<group>"; };
-		9864C67096EB4520850DDD9B /* FMDatabaseQueue.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FMDatabaseQueue.m; path = src/FMDatabaseQueue.m; sourceTree = "<group>"; };
-		9CB7230177AA450A8331E788 /* Pods-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-acknowledgements.markdown"; sourceTree = "<group>"; };
-		A4BF6E2650D94059838ECC7C /* Pods-environment.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-environment.h"; sourceTree = "<group>"; };
-		ABF3ADB198AF4111B7154B7B /* libPods-FMDB.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-FMDB.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		B064201EB13D43D4993A758D /* FMResultSet.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FMResultSet.h; path = src/FMResultSet.h; sourceTree = "<group>"; };
-		B2DC933F2FCE4EC7B9DD0D17 /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		D59A5B8DC8344A57B9884BB4 /* FMDatabasePool.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FMDatabasePool.m; path = src/FMDatabasePool.m; sourceTree = "<group>"; };
-		E0BF4029C4304BC8B85322B5 /* FMResultSet.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FMResultSet.m; path = src/FMResultSet.m; sourceTree = "<group>"; };
-		E2A44CD8F1D4443F97BF8138 /* Pods-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-acknowledgements.plist"; sourceTree = "<group>"; };
-		E984029F27954E61B17C563C /* Pods-FMDB.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-FMDB.xcconfig"; sourceTree = "<group>"; };
-		F3E50C486782487FB5E4F140 /* FMDatabaseAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FMDatabaseAdditions.h; path = src/FMDatabaseAdditions.h; sourceTree = "<group>"; };
-		FB041427040A4154A99DCB4A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		050D7AE1DA7F48B9AEEE5185 /* Pods-Lambda-Alert-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Lambda-Alert-dummy.m"; sourceTree = "<group>"; };
+		08D3D56104F5468FB29B64E5 /* CCActionSheet.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CCActionSheet.h; path = Sources/CCActionSheet.h; sourceTree = "<group>"; };
+		0A00BDE7503548E7A53CC894 /* FMDatabaseAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FMDatabaseAdditions.m; path = src/FMDatabaseAdditions.m; sourceTree = "<group>"; };
+		0FB3668CB2FF468EAE00C66A /* Pods-FMDB-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-FMDB-Private.xcconfig"; sourceTree = "<group>"; };
+		16588CD54A3C4C02B300DD25 /* Pods-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-resources.sh"; sourceTree = "<group>"; };
+		1677B94E8723459C95977939 /* FMDatabaseQueue.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FMDatabaseQueue.m; path = src/FMDatabaseQueue.m; sourceTree = "<group>"; };
+		24420DDFE43140D5A2270B28 /* FMDatabase.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FMDatabase.m; path = src/FMDatabase.m; sourceTree = "<group>"; };
+		2F5A5C2652AF44658878123C /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		36D3D177D8CF4E7797A0D5BA /* Pods-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-acknowledgements.plist"; sourceTree = "<group>"; };
+		47ED3DD42ADD404DB2C00561 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		4ABB592305E741AD9DE42315 /* libPods-Lambda-Alert.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Lambda-Alert.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4C6EE1E4BA1742FB8B2517F6 /* CCActionSheet.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CCActionSheet.m; path = Sources/CCActionSheet.m; sourceTree = "<group>"; };
+		512F7EA3396943679787062B /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk/System/Library/Frameworks/CoreGraphics.framework; sourceTree = DEVELOPER_DIR; };
+		5B1FB3FF910C4CEAB599DA3F /* FMDatabasePool.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FMDatabasePool.m; path = src/FMDatabasePool.m; sourceTree = "<group>"; };
+		5CDA1917470546209D6313DC /* FMResultSet.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FMResultSet.h; path = src/FMResultSet.h; sourceTree = "<group>"; };
+		62214EB92EA6485CAA398C89 /* FMResultSet.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FMResultSet.m; path = src/FMResultSet.m; sourceTree = "<group>"; };
+		67A241A2311545519D3AC151 /* Pods-Lambda-Alert-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Lambda-Alert-prefix.pch"; sourceTree = "<group>"; };
+		69FA86874825461AAFAD238A /* Pods-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-acknowledgements.markdown"; sourceTree = "<group>"; };
+		72222FCCC702409ABDCA47DD /* CCAlertView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CCAlertView.h; path = Sources/CCAlertView.h; sourceTree = "<group>"; };
+		75102E111A1E4A1B81F9C747 /* Pods-FMDB.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-FMDB.xcconfig"; sourceTree = "<group>"; };
+		89F38E18721642709A4C34EA /* Pods-FMDB-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-FMDB-dummy.m"; sourceTree = "<group>"; };
+		9B6E70B664AE42C7B007FCB4 /* Pods-FMDB-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-FMDB-prefix.pch"; sourceTree = "<group>"; };
+		A485D4EFDBC3479296124312 /* CCAlertView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CCAlertView.m; path = Sources/CCAlertView.m; sourceTree = "<group>"; };
+		A710EF97381E48E687C1D6A8 /* Pods-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-dummy.m"; sourceTree = "<group>"; };
+		AC5DDCDFB58E429594AB8A87 /* Pods-Lambda-Alert.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Lambda-Alert.xcconfig"; sourceTree = "<group>"; };
+		B202472F71AD4F7F8C6FAD74 /* libPods-FMDB.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-FMDB.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B7819D0201B045E9BE671225 /* FMDatabaseQueue.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FMDatabaseQueue.h; path = src/FMDatabaseQueue.h; sourceTree = "<group>"; };
+		B83C267B651D4153B92078A4 /* FMDatabaseAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FMDatabaseAdditions.h; path = src/FMDatabaseAdditions.h; sourceTree = "<group>"; };
+		C9A8A08A1B2941899EA91D9D /* Pods-environment.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-environment.h"; sourceTree = "<group>"; };
+		CBED85AE36A64833934D7137 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Pods.xcconfig; sourceTree = "<group>"; };
+		DB082763227141BA88D86F22 /* Pods-Lambda-Alert-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Lambda-Alert-Private.xcconfig"; sourceTree = "<group>"; };
+		DD5E1AC8D4C443E88EF1361C /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		E3B4320E989C44A2AD117850 /* FMDatabase.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FMDatabase.h; path = src/FMDatabase.h; sourceTree = "<group>"; };
+		FB7347F8A9B647E3AF88161D /* FMDatabasePool.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FMDatabasePool.h; path = src/FMDatabasePool.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		6BA038C92E244132A3C07F00 /* Frameworks */ = {
+		3F3B42DCAAD5419A92F235FD /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2A9C1C7430BE40648409A9D3 /* Foundation.framework in Frameworks */,
-				E97A1CC697564CB1A03B0F0E /* libPods-FMDB.a in Frameworks */,
+				C60D7403D26A4250BEB0D7DC /* CoreGraphics.framework in Frameworks */,
+				CC3A9FBCB0FF49068C098E65 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		E6B02B0BE04D4009B6CA46C5 /* Frameworks */ = {
+		8C9E3618611641FCA50D95B8 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6E9A2906B6E146B78E19212C /* Foundation.framework in Frameworks */,
+				EDA35E0E928B4C59A2678986 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		96B542648E59435D815CBCD1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2AA6BD7B0D8444EBB7D2C3B7 /* Foundation.framework in Frameworks */,
+				300EC17A26564AE2B3B62E9E /* libPods-FMDB.a in Frameworks */,
+				DCD772E6F8694836977F4ACB /* libPods-Lambda-Alert.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		1DEFCA5B35554F9388F1313B = {
+		0026A4C43E484F8BA007D8CE /* FMDB */ = {
 			isa = PBXGroup;
 			children = (
-				B2DC933F2FCE4EC7B9DD0D17 /* Podfile */,
-				F23D1CD6A3DA477E87CC75DD /* Frameworks */,
-				B85A527AE48D43C9BB5DFE21 /* Pods */,
-				604FD4FCF10C4E2BB8F7F136 /* Products */,
-				BA1AB08FD1E846ABB79E40CE /* Targets Support Files */,
-			);
-			sourceTree = "<group>";
-		};
-		604FD4FCF10C4E2BB8F7F136 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				6B8A401258384348B1CD8C79 /* libPods.a */,
-				ABF3ADB198AF4111B7154B7B /* libPods-FMDB.a */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		8AF54349ADBF45018840BFBD /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				E984029F27954E61B17C563C /* Pods-FMDB.xcconfig */,
-				16C00B8D210143D5A0897D62 /* Pods-FMDB-Private.xcconfig */,
-				9127E78988F24BC2AAE36212 /* Pods-FMDB-dummy.m */,
-				134B3F5515CA4DF49835AFCB /* Pods-FMDB-prefix.pch */,
-			);
-			name = "Support Files";
-			sourceTree = SOURCE_ROOT;
-		};
-		B85A527AE48D43C9BB5DFE21 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				FE2404EF65CD42939543BF4E /* FMDB */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
-		BA1AB08FD1E846ABB79E40CE /* Targets Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				EB2397FDB61C424CB363812A /* Pods */,
-			);
-			name = "Targets Support Files";
-			sourceTree = "<group>";
-		};
-		E3CD80150E6C415CA7034A82 /* iOS */ = {
-			isa = PBXGroup;
-			children = (
-				FB041427040A4154A99DCB4A /* Foundation.framework */,
-			);
-			name = iOS;
-			sourceTree = "<group>";
-		};
-		EB2397FDB61C424CB363812A /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				7A0E3E6658D14992AC121034 /* Pods.xcconfig */,
-				9CB7230177AA450A8331E788 /* Pods-acknowledgements.markdown */,
-				E2A44CD8F1D4443F97BF8138 /* Pods-acknowledgements.plist */,
-				468EF3D033484CEAB4A8F8A9 /* Pods-dummy.m */,
-				A4BF6E2650D94059838ECC7C /* Pods-environment.h */,
-				3FC84A197F6C44369E757D45 /* Pods-resources.sh */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
-		F23D1CD6A3DA477E87CC75DD /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				E3CD80150E6C415CA7034A82 /* iOS */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		F24D898C37FD40CD941294B8 /* common */ = {
-			isa = PBXGroup;
-			children = (
-				0AC85BF9294845889ABAF08C /* FMDatabase.h */,
-				82ADFE1F11E14FBAA214B194 /* FMDatabase.m */,
-				F3E50C486782487FB5E4F140 /* FMDatabaseAdditions.h */,
-				57E804D4E78F44C39F33AB67 /* FMDatabaseAdditions.m */,
-				149DDE8DAD23424794B26392 /* FMDatabasePool.h */,
-				D59A5B8DC8344A57B9884BB4 /* FMDatabasePool.m */,
-				7995193A5EB54937BA54E30A /* FMDatabaseQueue.h */,
-				9864C67096EB4520850DDD9B /* FMDatabaseQueue.m */,
-				B064201EB13D43D4993A758D /* FMResultSet.h */,
-				E0BF4029C4304BC8B85322B5 /* FMResultSet.m */,
-			);
-			name = common;
-			sourceTree = "<group>";
-		};
-		FE2404EF65CD42939543BF4E /* FMDB */ = {
-			isa = PBXGroup;
-			children = (
-				8AF54349ADBF45018840BFBD /* Support Files */,
-				F24D898C37FD40CD941294B8 /* common */,
+				0A7E8433C0D84782B1FA7533 /* Support Files */,
+				6394C18ABDC14E2FA7272B8F /* common */,
 			);
 			name = FMDB;
 			path = FMDB;
 			sourceTree = "<group>";
 		};
+		08B8D9DD4035412A986995F5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4EB52AD6149E4DDAAC5C96C2 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		0A7E8433C0D84782B1FA7533 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				75102E111A1E4A1B81F9C747 /* Pods-FMDB.xcconfig */,
+				0FB3668CB2FF468EAE00C66A /* Pods-FMDB-Private.xcconfig */,
+				89F38E18721642709A4C34EA /* Pods-FMDB-dummy.m */,
+				9B6E70B664AE42C7B007FCB4 /* Pods-FMDB-prefix.pch */,
+			);
+			name = "Support Files";
+			sourceTree = SOURCE_ROOT;
+		};
+		17273E1CE8F04BF1B013ADD4 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				AC5DDCDFB58E429594AB8A87 /* Pods-Lambda-Alert.xcconfig */,
+				DB082763227141BA88D86F22 /* Pods-Lambda-Alert-Private.xcconfig */,
+				050D7AE1DA7F48B9AEEE5185 /* Pods-Lambda-Alert-dummy.m */,
+				67A241A2311545519D3AC151 /* Pods-Lambda-Alert-prefix.pch */,
+			);
+			name = "Support Files";
+			sourceTree = SOURCE_ROOT;
+		};
+		28DAF335F97A4AEA82B43690 = {
+			isa = PBXGroup;
+			children = (
+				DD5E1AC8D4C443E88EF1361C /* Podfile */,
+				08B8D9DD4035412A986995F5 /* Frameworks */,
+				53A0C2B0FA8F41B3A3323E5C /* Pods */,
+				FE9FC8E7E6A9475884445D6B /* Products */,
+				F2EBEF3D9A544FC2A2531A45 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		4EB52AD6149E4DDAAC5C96C2 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				512F7EA3396943679787062B /* CoreGraphics.framework */,
+				47ED3DD42ADD404DB2C00561 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		53A0C2B0FA8F41B3A3323E5C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0026A4C43E484F8BA007D8CE /* FMDB */,
+				AAE8CFB24B414A23A1F0BF06 /* Lambda-Alert */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		6394C18ABDC14E2FA7272B8F /* common */ = {
+			isa = PBXGroup;
+			children = (
+				E3B4320E989C44A2AD117850 /* FMDatabase.h */,
+				24420DDFE43140D5A2270B28 /* FMDatabase.m */,
+				B83C267B651D4153B92078A4 /* FMDatabaseAdditions.h */,
+				0A00BDE7503548E7A53CC894 /* FMDatabaseAdditions.m */,
+				FB7347F8A9B647E3AF88161D /* FMDatabasePool.h */,
+				5B1FB3FF910C4CEAB599DA3F /* FMDatabasePool.m */,
+				B7819D0201B045E9BE671225 /* FMDatabaseQueue.h */,
+				1677B94E8723459C95977939 /* FMDatabaseQueue.m */,
+				5CDA1917470546209D6313DC /* FMResultSet.h */,
+				62214EB92EA6485CAA398C89 /* FMResultSet.m */,
+			);
+			name = common;
+			sourceTree = "<group>";
+		};
+		AAE8CFB24B414A23A1F0BF06 /* Lambda-Alert */ = {
+			isa = PBXGroup;
+			children = (
+				08D3D56104F5468FB29B64E5 /* CCActionSheet.h */,
+				4C6EE1E4BA1742FB8B2517F6 /* CCActionSheet.m */,
+				72222FCCC702409ABDCA47DD /* CCAlertView.h */,
+				A485D4EFDBC3479296124312 /* CCAlertView.m */,
+				17273E1CE8F04BF1B013ADD4 /* Support Files */,
+			);
+			name = "Lambda-Alert";
+			path = "Lambda-Alert";
+			sourceTree = "<group>";
+		};
+		E46E212D5AA24A78A3C9D2E9 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				CBED85AE36A64833934D7137 /* Pods.xcconfig */,
+				69FA86874825461AAFAD238A /* Pods-acknowledgements.markdown */,
+				36D3D177D8CF4E7797A0D5BA /* Pods-acknowledgements.plist */,
+				A710EF97381E48E687C1D6A8 /* Pods-dummy.m */,
+				C9A8A08A1B2941899EA91D9D /* Pods-environment.h */,
+				16588CD54A3C4C02B300DD25 /* Pods-resources.sh */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		F2EBEF3D9A544FC2A2531A45 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				E46E212D5AA24A78A3C9D2E9 /* Pods */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		FE9FC8E7E6A9475884445D6B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2F5A5C2652AF44658878123C /* libPods.a */,
+				B202472F71AD4F7F8C6FAD74 /* libPods-FMDB.a */,
+				4ABB592305E741AD9DE42315 /* libPods-Lambda-Alert.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		D937E5B9D783450BBFA17F20 /* Headers */ = {
+		4C39E229E5F342108A9030D8 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B140CDE61BF84C279AB68C1D /* FMDatabase.h in Headers */,
-				FB7A5B4395304BAFB427B27E /* FMDatabaseAdditions.h in Headers */,
-				E1A9D1F465D046C1847C5C63 /* FMDatabasePool.h in Headers */,
-				8409269C68FD4CBBAEA3769D /* FMDatabaseQueue.h in Headers */,
-				D7FC81D0B8C2410088F9EB8F /* FMResultSet.h in Headers */,
+				57B292AFB4F24DD3B85A880D /* CCActionSheet.h in Headers */,
+				6756B080D5E44B2D8AD9E018 /* CCAlertView.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A892BDAAC7644B0F9F7EB7C3 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C3775B1315A042E49C57E5F7 /* FMDatabase.h in Headers */,
+				9A8CF57B49334B888ABF84CE /* FMDatabaseAdditions.h in Headers */,
+				613E1FB6241A4857948CC472 /* FMDatabasePool.h in Headers */,
+				CD8C54DDC58A4BB0B2DFAFC3 /* FMDatabaseQueue.h in Headers */,
+				2E915598338F4CAB8FC5963E /* FMResultSet.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		B9EC1EAFBE824E8995230A53 /* Pods-FMDB */ = {
+		1B880FF23C5548C39B8F8B58 /* Pods */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 7640621856B840CEB015B02E /* Build configuration list for PBXNativeTarget "Pods-FMDB" */;
+			buildConfigurationList = B89AB2922D2B48E6B9DB2AB8 /* Build configuration list for PBXNativeTarget "Pods" */;
 			buildPhases = (
-				7FDF58060D5441249E3C729A /* Sources */,
-				E6B02B0BE04D4009B6CA46C5 /* Frameworks */,
-				D937E5B9D783450BBFA17F20 /* Headers */,
+				C69572EB425642DD8138B062 /* Sources */,
+				96B542648E59435D815CBCD1 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4EFA26FB93E14E2B8214F149 /* PBXTargetDependency */,
+				5E444CA8479A48289C41B067 /* PBXTargetDependency */,
+			);
+			name = Pods;
+			productName = Pods;
+			productReference = 2F5A5C2652AF44658878123C /* libPods.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		4FD434542F9E4EA292EA8A35 /* Pods-Lambda-Alert */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7FBAF00486D9452790825DF3 /* Build configuration list for PBXNativeTarget "Pods-Lambda-Alert" */;
+			buildPhases = (
+				83C52282220E4CA594C56C03 /* Sources */,
+				3F3B42DCAAD5419A92F235FD /* Frameworks */,
+				4C39E229E5F342108A9030D8 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-Lambda-Alert";
+			productName = "Pods-Lambda-Alert";
+			productReference = 4ABB592305E741AD9DE42315 /* libPods-Lambda-Alert.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		CD455317DAAC4ECEBF85581D /* Pods-FMDB */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3B9219704B3947AABEBDB880 /* Build configuration list for PBXNativeTarget "Pods-FMDB" */;
+			buildPhases = (
+				3E02DFDF746D42F995A04302 /* Sources */,
+				8C9E3618611641FCA50D95B8 /* Frameworks */,
+				A892BDAAC7644B0F9F7EB7C3 /* Headers */,
 			);
 			buildRules = (
 			);
@@ -217,88 +323,265 @@
 			);
 			name = "Pods-FMDB";
 			productName = "Pods-FMDB";
-			productReference = ABF3ADB198AF4111B7154B7B /* libPods-FMDB.a */;
-			productType = "com.apple.product-type.library.static";
-		};
-		BC4817FE0AB6489C9BEF601F /* Pods */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 3A94F0BA3DD4403C894FAFDC /* Build configuration list for PBXNativeTarget "Pods" */;
-			buildPhases = (
-				3C3E9A65D50544D3B45F18E6 /* Sources */,
-				6BA038C92E244132A3C07F00 /* Frameworks */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				6DCF8C770C0F43F382F70B77 /* PBXTargetDependency */,
-			);
-			name = Pods;
-			productName = Pods;
-			productReference = 6B8A401258384348B1CD8C79 /* libPods.a */;
+			productReference = B202472F71AD4F7F8C6FAD74 /* libPods-FMDB.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		F6FF5A594C6944CE80DDAC8C /* Project object */ = {
+		39CCBEAE731746189FC553D0 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0500;
 			};
-			buildConfigurationList = 1EB8337B84B74C0A94D10E7A /* Build configuration list for PBXProject "Pods" */;
+			buildConfigurationList = 2C89C58EEF904F9AB7FC2F91 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 			);
-			mainGroup = 1DEFCA5B35554F9388F1313B;
-			productRefGroup = 604FD4FCF10C4E2BB8F7F136 /* Products */;
+			mainGroup = 28DAF335F97A4AEA82B43690;
+			productRefGroup = FE9FC8E7E6A9475884445D6B /* Products */;
 			projectDirPath = "";
 			projectReferences = (
 			);
 			projectRoot = "";
 			targets = (
-				BC4817FE0AB6489C9BEF601F /* Pods */,
-				B9EC1EAFBE824E8995230A53 /* Pods-FMDB */,
+				1B880FF23C5548C39B8F8B58 /* Pods */,
+				CD455317DAAC4ECEBF85581D /* Pods-FMDB */,
+				4FD434542F9E4EA292EA8A35 /* Pods-Lambda-Alert */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		3C3E9A65D50544D3B45F18E6 /* Sources */ = {
+		3E02DFDF746D42F995A04302 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7771D1880DB846F1BC10EC27 /* Pods-dummy.m in Sources */,
+				84B18989FD48466885623C43 /* FMDatabase.m in Sources */,
+				1D02D6F70C3345CAA351E2BC /* FMDatabaseAdditions.m in Sources */,
+				4149EFFA224F4EDE92087BBA /* FMDatabasePool.m in Sources */,
+				7FAAEA5410F54701BB01D5BE /* FMDatabaseQueue.m in Sources */,
+				F9EDCA3470C54A0F9DA87CE5 /* FMResultSet.m in Sources */,
+				184EE10E5CBC487B9FD88E3F /* Pods-FMDB-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		7FDF58060D5441249E3C729A /* Sources */ = {
+		83C52282220E4CA594C56C03 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3D379D45234041C5AB5729CB /* FMDatabase.m in Sources */,
-				18FAB26BD91C4B71BAF0D7A7 /* FMDatabaseAdditions.m in Sources */,
-				40D00C2E7AF34E49BD158EB6 /* FMDatabasePool.m in Sources */,
-				F125F404D3884AD4B67AE9DE /* FMDatabaseQueue.m in Sources */,
-				6D4D1A7B6AD54F4CAD8781D9 /* FMResultSet.m in Sources */,
-				CF5ADCCE205645CE9995082F /* Pods-FMDB-dummy.m in Sources */,
+				13C84AF766E64C79A8CD7BF6 /* CCActionSheet.m in Sources */,
+				2304D13E424B452DB9105FC8 /* CCAlertView.m in Sources */,
+				84F100F8310B457AA3E5BF34 /* Pods-Lambda-Alert-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C69572EB425642DD8138B062 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				025CC0906EFB41A48B9EC314 /* Pods-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		6DCF8C770C0F43F382F70B77 /* PBXTargetDependency */ = {
+		4EFA26FB93E14E2B8214F149 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = B9EC1EAFBE824E8995230A53 /* Pods-FMDB */;
-			targetProxy = 2BDB6D82675A498F95C121A2 /* PBXContainerItemProxy */;
+			target = CD455317DAAC4ECEBF85581D /* Pods-FMDB */;
+			targetProxy = BDC25C0722E5487B979A8743 /* PBXContainerItemProxy */;
+		};
+		5E444CA8479A48289C41B067 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4FD434542F9E4EA292EA8A35 /* Pods-Lambda-Alert */;
+			targetProxy = FFB503890DBA43B3908ACF2D /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		33DD653C5CCA4419A1670E33 /* Release */ = {
+		08168B78B0CB4AE589D5C6AD /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0FB3668CB2FF468EAE00C66A /* Pods-FMDB-Private.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				COPY_PHASE_STRIP = YES;
+				DSTROOT = /tmp/xcodeproj.dst;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Pods-FMDB-prefix.pch";
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				INSTALL_PATH = "$(BUILT_PRODUCTS_DIR)";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				OTHER_CFLAGS = (
+					"-DNS_BLOCK_ASSERTIONS=1",
+					"$(inherited)",
+				);
+				OTHER_CPLUSPLUSFLAGS = (
+					"-DNS_BLOCK_ASSERTIONS=1",
+					"$(inherited)",
+				);
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		095BDA445F1E44C58572BD92 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DB082763227141BA88D86F22 /* Pods-Lambda-Alert-Private.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				COPY_PHASE_STRIP = YES;
+				DSTROOT = /tmp/xcodeproj.dst;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Pods-Lambda-Alert-prefix.pch";
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				INSTALL_PATH = "$(BUILT_PRODUCTS_DIR)";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				OTHER_CFLAGS = (
+					"-DNS_BLOCK_ASSERTIONS=1",
+					"$(inherited)",
+				);
+				OTHER_CPLUSPLUSFLAGS = (
+					"-DNS_BLOCK_ASSERTIONS=1",
+					"$(inherited)",
+				);
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		1CD63E6B2E2B476084FB958F /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CBED85AE36A64833934D7137 /* Pods.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				COPY_PHASE_STRIP = YES;
+				DSTROOT = /tmp/xcodeproj.dst;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				INSTALL_PATH = "$(BUILT_PRODUCTS_DIR)";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				OTHER_CFLAGS = (
+					"-DNS_BLOCK_ASSERTIONS=1",
+					"$(inherited)",
+				);
+				OTHER_CPLUSPLUSFLAGS = (
+					"-DNS_BLOCK_ASSERTIONS=1",
+					"$(inherited)",
+				);
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		3F04A3B2B6D14E97B574F656 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0FB3668CB2FF468EAE00C66A /* Pods-FMDB-Private.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				COPY_PHASE_STRIP = NO;
+				DSTROOT = /tmp/xcodeproj.dst;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Pods-FMDB-prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				INSTALL_PATH = "$(BUILT_PRODUCTS_DIR)";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		5E7CA4C32B414A309C88891F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CBED85AE36A64833934D7137 /* Pods.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				COPY_PHASE_STRIP = NO;
+				DSTROOT = /tmp/xcodeproj.dst;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				INSTALL_PATH = "$(BUILT_PRODUCTS_DIR)";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		84275BE1EB7747788866B03F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DB082763227141BA88D86F22 /* Pods-Lambda-Alert-Private.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				COPY_PHASE_STRIP = NO;
+				DSTROOT = /tmp/xcodeproj.dst;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Pods-Lambda-Alert-prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				INSTALL_PATH = "$(BUILT_PRODUCTS_DIR)";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		ADB01581D1CB47608341A27E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -328,125 +611,7 @@
 			};
 			name = Release;
 		};
-		5350C9B569094189B049ADB4 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 16C00B8D210143D5A0897D62 /* Pods-FMDB-Private.xcconfig */;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
-				COPY_PHASE_STRIP = YES;
-				DSTROOT = /tmp/xcodeproj.dst;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Pods-FMDB-prefix.pch";
-				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
-				INSTALL_PATH = "$(BUILT_PRODUCTS_DIR)";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
-				OTHER_CFLAGS = (
-					"-DNS_BLOCK_ASSERTIONS=1",
-					"$(inherited)",
-				);
-				OTHER_CPLUSPLUSFLAGS = (
-					"-DNS_BLOCK_ASSERTIONS=1",
-					"$(inherited)",
-				);
-				OTHER_LDFLAGS = "";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PUBLIC_HEADERS_FOLDER_PATH = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
-		9EE268DC8A214470BFD02216 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 16C00B8D210143D5A0897D62 /* Pods-FMDB-Private.xcconfig */;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
-				COPY_PHASE_STRIP = NO;
-				DSTROOT = /tmp/xcodeproj.dst;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Pods-FMDB-prefix.pch";
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
-				INSTALL_PATH = "$(BUILT_PRODUCTS_DIR)";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
-				OTHER_LDFLAGS = "";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PUBLIC_HEADERS_FOLDER_PATH = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-			};
-			name = Debug;
-		};
-		BF37D44CEDBA47E69C44B918 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7A0E3E6658D14992AC121034 /* Pods.xcconfig */;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
-				COPY_PHASE_STRIP = YES;
-				DSTROOT = /tmp/xcodeproj.dst;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
-				INSTALL_PATH = "$(BUILT_PRODUCTS_DIR)";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
-				OTHER_CFLAGS = (
-					"-DNS_BLOCK_ASSERTIONS=1",
-					"$(inherited)",
-				);
-				OTHER_CPLUSPLUSFLAGS = (
-					"-DNS_BLOCK_ASSERTIONS=1",
-					"$(inherited)",
-				);
-				OTHER_LDFLAGS = "";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PUBLIC_HEADERS_FOLDER_PATH = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
-		D7613D6BF860419EBDFB3964 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7A0E3E6658D14992AC121034 /* Pods.xcconfig */;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
-				COPY_PHASE_STRIP = NO;
-				DSTROOT = /tmp/xcodeproj.dst;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
-				INSTALL_PATH = "$(BUILT_PRODUCTS_DIR)";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
-				OTHER_LDFLAGS = "";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PUBLIC_HEADERS_FOLDER_PATH = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-			};
-			name = Debug;
-		};
-		F22179A72DD047B28949ECAE /* Debug */ = {
+		BD5F1B15D38946BF81707CBD /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -485,34 +650,43 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		1EB8337B84B74C0A94D10E7A /* Build configuration list for PBXProject "Pods" */ = {
+		2C89C58EEF904F9AB7FC2F91 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				F22179A72DD047B28949ECAE /* Debug */,
-				33DD653C5CCA4419A1670E33 /* Release */,
+				BD5F1B15D38946BF81707CBD /* Debug */,
+				ADB01581D1CB47608341A27E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		3A94F0BA3DD4403C894FAFDC /* Build configuration list for PBXNativeTarget "Pods" */ = {
+		3B9219704B3947AABEBDB880 /* Build configuration list for PBXNativeTarget "Pods-FMDB" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				D7613D6BF860419EBDFB3964 /* Debug */,
-				BF37D44CEDBA47E69C44B918 /* Release */,
+				3F04A3B2B6D14E97B574F656 /* Debug */,
+				08168B78B0CB4AE589D5C6AD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		7640621856B840CEB015B02E /* Build configuration list for PBXNativeTarget "Pods-FMDB" */ = {
+		7FBAF00486D9452790825DF3 /* Build configuration list for PBXNativeTarget "Pods-Lambda-Alert" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				9EE268DC8A214470BFD02216 /* Debug */,
-				5350C9B569094189B049ADB4 /* Release */,
+				84275BE1EB7747788866B03F /* Debug */,
+				095BDA445F1E44C58572BD92 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B89AB2922D2B48E6B9DB2AB8 /* Build configuration list for PBXNativeTarget "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5E7CA4C32B414A309C88891F /* Debug */,
+				1CD63E6B2E2B476084FB958F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = F6FF5A594C6944CE80DDAC8C /* Project object */;
+	rootObject = 39CCBEAE731746189FC553D0 /* Project object */;
 }

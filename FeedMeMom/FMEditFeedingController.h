@@ -10,10 +10,10 @@
 #import "FMFeedingEntry.h"
 
 
-@interface FMNewFeedingController : UITableViewController
+@interface FMEditFeedingController : UITableViewController
 
-@property(nonatomic, copy) void (^doneOk)(FMNewFeedingController *controller);
-@property(nonatomic, copy) void (^prepare)(FMNewFeedingController *controller);
+@property(nonatomic, copy) void (^doneOk)(FMEditFeedingController *controller);
+@property(nonatomic, copy) void (^prepare)(FMEditFeedingController *controller);
 
 @property (nonatomic,strong) NSDate* date;
 @property (nonatomic) int leftMinutes;
@@ -21,6 +21,8 @@
 @property (weak, nonatomic) IBOutlet UILabel *lblRightMinutes;
 @property (weak, nonatomic) IBOutlet UILabel *lblLeftMinutes;
 @property (weak, nonatomic) IBOutlet UILabel *lblDate;
+@property (weak, nonatomic) IBOutlet UIButton *btnDeleteFeeding;
 
 
+- (void)setFeeding:(FMFeedingEntry *)feeding;
 @end
