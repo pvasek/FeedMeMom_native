@@ -33,7 +33,7 @@
 
         [alert addButtonWithTitle:NSLocalizedString(@"Yes", nil) block:^{
             [Repository deleteFeedingWithId:_feeding.id];
-            [self.navigationController popToRootViewControllerAnimated:true];
+            [self.navigationController popToRootViewControllerAnimated:YES];
         }];
         [alert addButtonWithTitle:NSLocalizedString(@"No", nil) block:^{
         }];
