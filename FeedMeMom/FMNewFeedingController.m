@@ -2,6 +2,7 @@
 #import "FMAppDelegate.h"
 #import "CCAlertView.h"
 #import "FMFeedingEntry.h"
+#import "FMRepository.h"
 
 
 @implementation FMNewFeedingController {
@@ -10,6 +11,9 @@
 
 - (IBAction)saveFeeding:(id)sender {
     [self.navigationController popToRootViewControllerAnimated:YES];
+    [_feeding stop];
+    _feeding.date = [NSDate date];
+    [Repository insertFeeding:_feeding];
 }
 
 - (IBAction)cancelFeeding:(id)sender {
@@ -60,6 +64,7 @@
     _lblLeft.hidden = isLeft;
     _lblRightRunning.hidden = isLeft;
     _lblRight.hidden = !isLeft;
+    //_lblLeftTime.text = _feeding.left
     if (isLeft) {
         [_btnSwitchSides setTitle:NSLocalizedString(@"Switch to Right", nil) forState:UIControlStateNormal];
     } else {

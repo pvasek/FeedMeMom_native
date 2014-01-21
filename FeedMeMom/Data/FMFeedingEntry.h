@@ -30,5 +30,7 @@
 
 - (void)pause;
 
+- (void)stop;
+
 - (void)start;
 @end
