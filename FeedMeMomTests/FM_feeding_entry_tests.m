@@ -97,4 +97,13 @@
     XCTAssertEqualObjects(@"days", result2.unitText);
 }
 
+
+- (void)test_should_calculate_total_time_for_running_feeding {
+    [_target setNowForTestDate:[NSDate dateWithTimeIntervalSinceReferenceDate: 120]];
+    _target.rightBreastLengthSeconds = 30;
+    _target.leftStartTime = [NSDate dateWithTimeIntervalSinceReferenceDate: 0];
+    XCTAssertEqual(150, _target.totalSeconds);
+    XCTAssertEqualObjects(@"2:30", _target.totalMinutesText);
+}
+
 @end

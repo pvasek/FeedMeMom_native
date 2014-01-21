@@ -619,6 +619,9 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                                 <state key="highlighted">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="switchSides:" destination="SC1-T1-AWu" eventType="touchUpInside" id="Qma-sD-fmr"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -636,10 +639,14 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="btnSwitchSides" destination="scK-LA-pyY" id="2Ij-mp-GlF"/>
                         <outlet property="lblLeft" destination="v3U-v2-uKT" id="JYG-z4-0kT"/>
                         <outlet property="lblLeftRunning" destination="clX-rJ-g9J" id="6Pp-62-pJ3"/>
+                        <outlet property="lblLeftTime" destination="e8o-Kg-g3a" id="aqB-Az-MHk"/>
                         <outlet property="lblRight" destination="b25-em-8Cb" id="AvI-tK-lut"/>
                         <outlet property="lblRightRunning" destination="kM2-4H-5rw" id="3Ii-DQ-OQt"/>
+                        <outlet property="lblRightTime" destination="BX6-C1-xOv" id="ouM-CB-YoJ"/>
+                        <outlet property="lblTime" destination="48M-ab-vkk" id="Nph-Xw-h19"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RVb-ht-dd8" userLabel="First Responder" sceneMemberID="firstResponder"/>

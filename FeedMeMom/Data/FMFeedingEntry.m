@@ -45,8 +45,27 @@
     return _rightBreastLengthSeconds / 60;
 }
 
+- (int)totalSeconds {
+    int running = [self runningLeft] + [self runningRight];
+    return _leftBreastLengthSeconds+_rightBreastLengthSeconds + running;
+}
+
+- (int)runningLeft {
+    if (_leftStartTime != nil) {
+        return (int) [[self now] timeIntervalSinceDate:_leftStartTime];
+    }
+    return 0;
+}
+
+- (int)runningRight {
+    if (_rightStartTime != nil) {
+        return (int) [[self now] timeIntervalSinceDate:_rightStartTime];
+    }
+    return 0;
+}
+
 - (int)totalMinutes {
-    return (_leftBreastLengthSeconds+_rightBreastLengthSeconds) / 60;
+    return self.totalSeconds / 60;
 }
 
 - (void)setRightBreastLengthMinutes:(int)rightBreastLengthMinutes {
@@ -55,7 +74,8 @@
 }
 
 - (NSString*)totalMinutesText {
-    return [NSString stringWithFormat:@"%d", self.totalMinutes];
+    int tot = self.totalSeconds;
+    return [NSString stringWithFormat:@"%d:%02d", tot / 60, tot % 60];
 }
 
 - (FMAgo*)ago {
@@ -105,6 +125,32 @@
 
 - (void)setNowForTestDate:(NSDate*)date {
     _testNow = date;
+}
+
+
+- (void)pause {
+    [self stop];
+    _pausedAt = [self now];
+}
+
+- (BOOL)isPaused {
+    return _pausedAt != nil;
+}
+
+- (void)stop {
+    self.rightBreastLengthSeconds += [self runningRight];
+    self.leftBreastLengthSeconds += [self runningLeft];
+    self.rightStartTime = nil;
+    self.leftStartTime = nil;
+}
+
+- (void)start {
+    _pausedAt = nil;
+    if (_isLeft) {
+        self.leftStartTime = [self now];
+    } else {
+        self.rightStartTime = [self now];
+    }
 }
 
 @end

@@ -20,9 +20,15 @@
 @property(nonatomic) int leftBreastLengthMinutes;
 @property(nonatomic) int rightBreastLengthMinutes;
 @property(nonatomic, readonly) int totalMinutes;
+@property (nonatomic, readonly) int totalSeconds;
+@property (nonatomic, readonly) BOOL isPaused;
 
+- (NSString *)totalMinutesText;
 
 - (FMAgo *)ago;
 - (void)setNowForTestDate:(NSDate *)date;
 
+- (void)pause;
+
+- (void)start;
 @end
