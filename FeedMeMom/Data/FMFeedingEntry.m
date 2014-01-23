@@ -50,6 +50,14 @@
     return _leftBreastLengthSeconds+_rightBreastLengthSeconds + running;
 }
 
+- (int)totalLeftSeconds {
+    return _leftBreastLengthSeconds + [self runningLeft];
+}
+
+- (int)totalRightSeconds {
+    return _rightBreastLengthSeconds + [self runningRight];
+}
+
 - (int)runningLeft {
     if (_leftStartTime != nil) {
         return (int) [[self now] timeIntervalSinceDate:_leftStartTime];
@@ -76,6 +84,16 @@
 - (NSString*)totalMinutesText {
     int tot = self.totalSeconds;
     return [NSString stringWithFormat:@"%d:%02d", tot / 60, tot % 60];
+}
+
+- (NSString*)totalLeftMinutesText {
+    int tmp = [self totalLeftSeconds] / 60;
+    return [NSString stringWithFormat:@"%d", tmp];
+}
+
+- (NSString*)totalRightMinutesText {
+    int tmp = [self totalRightSeconds] / 60;
+    return [NSString stringWithFormat:@"%d", tmp];
 }
 
 - (FMAgo*)ago {

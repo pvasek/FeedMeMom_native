@@ -17,6 +17,8 @@ FMRepository *Repository;
 
 @property (strong, nonatomic) UIWindow *window;
 
++ (UIViewController *)fromStoryboardWithName:(NSString *)name;
+
 +(UIViewController*) historyController;
 
 @end

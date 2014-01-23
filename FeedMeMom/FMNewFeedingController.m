@@ -5,6 +5,14 @@
 #import "FMRepository.h"
 
 
+static NSString *const ckFeedingIncluded = @"feedingIncluded";
+static NSString *const ckIsLeft = @"isLeft";
+static NSString *const ckRightBreastLengthSeconds = @"rightBreastLengthSeconds";
+static NSString *const ckLeftBreastLengthSeconds = @"leftBreastLengthSeconds";
+static NSString *const ckLeftStartTime = @"leftStartTime";
+static NSString *const ckRightStartTime = @"rightStartTime";
+static NSString *const ckPausedAt = @"pausedAt";
+
 @implementation FMNewFeedingController {
     FMFeedingEntry *_feeding;
 }
@@ -64,7 +72,6 @@
     _lblLeft.hidden = isLeft;
     _lblRightRunning.hidden = isLeft;
     _lblRight.hidden = !isLeft;
-    //_lblLeftTime.text = _feeding.left
     if (isLeft) {
         [_btnSwitchSides setTitle:NSLocalizedString(@"Switch to Right", nil) forState:UIControlStateNormal];
     } else {
@@ -74,6 +81,53 @@
 
 - (void) updateData {
     _lblTime.text = _feeding.totalMinutesText;
+    _lblLeftTime.text = [_feeding totalLeftMinutesText];
+    _lblRightTime.text = [_feeding totalRightMinutesText];
+
+    if (_feeding.isPaused) {
+        _lblTapDescription.text = NSLocalizedString(@"tap to start", nil);
+    } else {
+        _lblTapDescription.text = NSLocalizedString(@"tap to pause", nil);
+    }
+}
+
+- (void)encodeRestorableStateWithCoder:(NSCoder *)coder {
+    [super encodeRestorableStateWithCoder:coder];
+    [coder encodeBool:true forKey:ckFeedingIncluded];
+    [coder encodeInt:_feeding.isLeft forKey:ckIsLeft];
+    [coder encodeInt:_feeding.rightBreastLengthSeconds forKey:ckRightBreastLengthSeconds];
+    [coder encodeInt:_feeding.leftBreastLengthSeconds forKey:ckLeftBreastLengthSeconds];
+    if (_feeding.leftStartTime != nil) {
+        [coder encodeDouble:_feeding.leftStartTime.timeIntervalSinceReferenceDate forKey:ckLeftStartTime];
+    }
+    if (_feeding.rightStartTime != nil) {
+        [coder encodeDouble:_feeding.rightStartTime.timeIntervalSinceReferenceDate forKey:ckRightStartTime];
+    }
+    if (_feeding.pausedAt != nil) {
+        [coder encodeDouble:_feeding.pausedAt.timeIntervalSinceReferenceDate forKey:ckPausedAt];
+    }
+}
+
+- (void)decodeRestorableStateWithCoder:(NSCoder *)coder {
+    [super decodeRestorableStateWithCoder:coder];
+    if ([coder decodeBoolForKey:ckFeedingIncluded]) {
+        _feeding = [[FMFeedingEntry alloc] init];
+        _feeding.isLeft = [coder decodeIntForKey:ckIsLeft];
+        _feeding.rightBreastLengthSeconds = [coder decodeIntForKey:ckRightBreastLengthSeconds];
+        _feeding.leftBreastLengthSeconds = [coder decodeIntForKey:ckLeftBreastLengthSeconds];
+        if ([coder containsValueForKey:ckLeftStartTime]) {
+            double tmp = [coder decodeDoubleForKey:ckLeftStartTime];
+            _feeding.leftStartTime = [[NSDate alloc] initWithTimeIntervalSinceReferenceDate:tmp];
+        }
+        if ([coder containsValueForKey:ckRightStartTime]) {
+            double tmp = [coder decodeDoubleForKey:ckRightStartTime];
+            _feeding.rightStartTime = [[NSDate alloc] initWithTimeIntervalSinceReferenceDate:tmp];
+        }
+        if ([coder containsValueForKey:ckPausedAt]) {
+            double tmp = [coder decodeDoubleForKey:ckPausedAt];
+            _feeding.pausedAt = [[NSDate alloc] initWithTimeIntervalSinceReferenceDate:tmp];
+        }
+    }
 }
 
 

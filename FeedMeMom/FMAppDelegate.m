@@ -1,6 +1,9 @@
 #import "FMAppDelegate.h"
 #import "FMRepository.h"
 
+static NSString *const coderKeyAppVersion = @"appVersion";
+static int const appStateVersion = 1;
+
 @implementation FMAppDelegate {
 @private
     UIWindow *_window;
@@ -56,6 +59,22 @@
         historyController.modalTransitionStyle = UIModalTransitionStyleCrossDissolve;
     }
     return historyController;
+}
+
+- (BOOL)application:(UIApplication *)application shouldSaveApplicationState:(NSCoder *)coder {
+    [coder encodeInt:appStateVersion forKey:coderKeyAppVersion];
+    return YES;
+}
+
+- (BOOL)application:(UIApplication *)application shouldRestoreApplicationState:(NSCoder *)coder {
+    return [coder decodeIntForKey:coderKeyAppVersion] == appStateVersion;
+
+}
+
+- (UIViewController *)application:(UIApplication *)application viewControllerWithRestorationIdentifierPath:(NSArray *)identifierComponents coder:(NSCoder *)coder {
+    NSString *resId = identifierComponents.lastObject;
+    return nil;
+    //return [FMAppDelegate fromStoryboardWithName:resId];
 }
 
 

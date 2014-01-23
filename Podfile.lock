@@ -5,13 +5,27 @@ PODS:
   - FMDB/standard (2.1):
     - FMDB/common
   - Lambda-Alert (1.0.0)
+  - MMDrawerController (0.4.0):
+    - MMDrawerController/Core
+    - MMDrawerController/MMDrawerBarButtonItem
+    - MMDrawerController/MMDrawerVisualStates
+    - MMDrawerController/Subclass
+  - MMDrawerController/Core (0.4.0)
+  - MMDrawerController/MMDrawerBarButtonItem (0.4.0):
+    - MMDrawerController/Core
+  - MMDrawerController/MMDrawerVisualStates (0.4.0):
+    - MMDrawerController/Core
+  - MMDrawerController/Subclass (0.4.0):
+    - MMDrawerController/Core
 
 DEPENDENCIES:
   - FMDB
   - Lambda-Alert
+  - MMDrawerController (~> 0.4.0)
 
 SPEC CHECKSUMS:
   FMDB: 3fd5aaf632ca4ed39e3f101e0398504e6d5b0918
   Lambda-Alert: 16cac975568b71cd2940df8ca9cadb87882baae2
+  MMDrawerController: 44baaee6b79487b4681eb61597fb790586909c0c
 
 COCOAPODS: 0.29.0

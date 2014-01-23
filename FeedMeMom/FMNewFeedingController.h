@@ -11,6 +11,9 @@
 @property (weak, nonatomic) IBOutlet UILabel *lblLeftTime;
 @property (weak, nonatomic) IBOutlet UILabel *lblRightTime;
 @property (weak, nonatomic) IBOutlet UIButton *btnSwitchSides;
+@property (weak, nonatomic) IBOutlet UILabel *lblTapDescription;
 
 @property (nonatomic) BOOL isLeft;
+
++ (UIViewController *)viewControllerWithRestorationIdentifierPath:(NSArray *)ic coder:(NSCoder *)coder;
 @end

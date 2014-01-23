@@ -5,13 +5,15 @@
 #import "FMAppDelegate.h"
 #import "FMEditFeedingController.h"
 #import "FMRepository.h"
+#import "UIViewController+MMDrawerController.h"
 
 @implementation FMLastFeedingController {
     FMFeedingEntry *_lastFeeding;
 }
 
 - (IBAction)menuClick:(id)sender {
-    [self.sidePanelController showLeftPanelAnimated:YES];
+    //[self.sidePanelController showLeftPanelAnimated:YES];
+    [self.mm_drawerController toggleDrawerSide: MMDrawerSideLeft animated:true completion:nil];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -42,5 +44,6 @@
         [controller setFeeding:_lastFeeding];
     }
 }
+
 
 @end

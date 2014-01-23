@@ -8,18 +8,16 @@
 
 - (void)awakeFromNib {
     [super awakeFromNib];
-    [self setLeftPanel:[self.storyboard instantiateViewControllerWithIdentifier:@"sideMenuController"]];
+    self.openDrawerGestureModeMask = MMOpenDrawerGestureModePanningNavigationBar;
+    [self setLeftDrawerViewController:[self.storyboard instantiateViewControllerWithIdentifier:@"sideMenuController"]];
     UIViewController *mainNavigationController = [self.storyboard instantiateViewControllerWithIdentifier:@"mainNavigationController"];
     MainNavigationController = (UINavigationController*)mainNavigationController;
-    [self setCenterPanel:mainNavigationController];
+    [self setCenterViewController:mainNavigationController];
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self.sidePanelController showCenterPanelAnimated:YES];
-}
-
-- (void)stylePanel:(UIView *)panel {
+    [self.sidePanelController showCenterPanelAnimated:NO];
 }
 
 @end

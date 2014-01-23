@@ -30,7 +30,7 @@
         <!--Last Feeding Controller - Last Feeding-->
         <scene sceneID="LIy-84-QGG">
             <objects>
-                <viewController id="wiM-ZG-rlY" customClass="FMLastFeedingController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="lastFeedingController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="wiM-ZG-rlY" customClass="FMLastFeedingController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="f7c-5P-5k8"/>
                         <viewControllerLayoutGuide type="bottom" id="TTe-JX-Syw"/>
@@ -151,7 +151,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="SC1-T1-AWu" kind="push" id="0Va-ND-Imt"/>
+                                    <segue destination="SC1-T1-AWu" kind="push" identifier="newRightFeeding" id="0Va-ND-Imt"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QUl-iL-vy9" userLabel="btnStartLeft">
@@ -170,7 +170,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="SC1-T1-AWu" kind="push" id="Cgy-Bf-X0s"/>
+                                    <segue destination="SC1-T1-AWu" kind="push" identifier="newLeftFeeding" id="Cgy-Bf-X0s"/>
                                 </connections>
                             </button>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="recomended" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3S6-uk-kZc">
@@ -247,7 +247,7 @@
         <!--Edit Feeding Controller - New Feeding-->
         <scene sceneID="hKA-s1-H6p">
             <objects>
-                <tableViewController extendedLayoutIncludesOpaqueBars="YES" id="zIA-kg-C7R" customClass="FMEditFeedingController" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="editFeedingController" extendedLayoutIncludesOpaqueBars="YES" useStoryboardIdentifierAsRestorationIdentifier="YES" id="zIA-kg-C7R" customClass="FMEditFeedingController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="h2S-QD-CdX">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -256,7 +256,7 @@
                             <tableViewSection headerTitle="When" id="5Wt-XR-adG">
                                 <cells>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="geg-nc-8a1">
-                                        <rect key="frame" x="0.0" y="75" width="320" height="44"/>
+                                        <rect key="frame" x="0.0" y="119" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="geg-nc-8a1" id="co8-Vc-DPp">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
@@ -286,7 +286,7 @@
                             <tableViewSection headerTitle="How much" id="1IO-eI-WRG">
                                 <cells>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="gSg-d6-cKB">
-                                        <rect key="frame" x="0.0" y="167" width="320" height="44"/>
+                                        <rect key="frame" x="0.0" y="211" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="gSg-d6-cKB" id="h3m-dg-93I">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
@@ -312,7 +312,7 @@
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="fti-OF-bOK">
-                                        <rect key="frame" x="0.0" y="211" width="320" height="44"/>
+                                        <rect key="frame" x="0.0" y="255" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="fti-OF-bOK" id="zu8-d0-XwY">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
@@ -342,7 +342,7 @@
                             <tableViewSection id="gup-y9-psF">
                                 <cells>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="wU9-Bd-uKS">
-                                        <rect key="frame" x="0.0" y="275" width="320" height="44"/>
+                                        <rect key="frame" x="0.0" y="319" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="wU9-Bd-uKS" id="roz-qn-1aF">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
@@ -398,7 +398,7 @@
             <objects>
                 <tableViewController storyboardIdentifier="dateSelectorController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="gdk-KN-LLH" userLabel="DateController" customClass="FMDateSelectorController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="Fam-d5-Evy">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <sections>
@@ -466,7 +466,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
             <objects>
                 <tableViewController storyboardIdentifier="LengthController" id="6ja-KY-xls" userLabel="LengthController" customClass="FMLengthSelectorController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="bkH-Il-xUf">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <sections>
@@ -508,7 +508,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
         <!--Root Controller-->
         <scene sceneID="Gkn-tH-fBs">
             <objects>
-                <viewController id="y65-0A-6fC" customClass="FMRootController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="rootController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="y65-0A-6fC" customClass="FMRootController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="e0h-79-25p"/>
                         <viewControllerLayoutGuide type="bottom" id="WhD-Tt-YUj"/>
@@ -526,7 +526,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
         <!--New Feeding Controller - New Feeding-->
         <scene sceneID="upn-W3-zdq">
             <objects>
-                <viewController id="SC1-T1-AWu" customClass="FMNewFeedingController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="newFeedingController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="SC1-T1-AWu" customClass="FMNewFeedingController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="nJW-3Y-t0K"/>
                         <viewControllerLayoutGuide type="bottom" id="lht-Pg-owm"/>
@@ -550,7 +550,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                                         <rect key="frame" x="10" y="99" width="122" height="29"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="24"/>
-                                        <color key="textColor" red="1" green="1" blue="1" alpha="0.59999999999999998" colorSpace="calibratedRGB"/>
+                                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" fixedFrame="YES" text="left" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="clX-rJ-g9J" userLabel="lblSecondTimeInfo">
@@ -579,7 +579,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                                         <rect key="frame" x="148" y="99" width="122" height="29"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="24"/>
-                                        <color key="textColor" red="1" green="1" blue="1" alpha="0.59999999999999998" colorSpace="calibratedRGB"/>
+                                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" fixedFrame="YES" text="right" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kM2-4H-5rw" userLabel="lblSecondTimeInfo">
@@ -646,6 +646,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                         <outlet property="lblRight" destination="b25-em-8Cb" id="AvI-tK-lut"/>
                         <outlet property="lblRightRunning" destination="kM2-4H-5rw" id="3Ii-DQ-OQt"/>
                         <outlet property="lblRightTime" destination="BX6-C1-xOv" id="ouM-CB-YoJ"/>
+                        <outlet property="lblTapDescription" destination="VRg-pl-DNY" id="qUs-QC-4iZ"/>
                         <outlet property="lblTime" destination="48M-ab-vkk" id="Nph-Xw-h19"/>
                     </connections>
                 </viewController>
@@ -837,7 +838,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
         <segue reference="Cgy-Bf-X0s"/>
+        <segue reference="0hz-it-qNC"/>
         <segue reference="Xjf-X5-mau"/>
-        <segue reference="K8K-PZ-6mL"/>
     </inferredMetricsTieBreakers>
 </document>

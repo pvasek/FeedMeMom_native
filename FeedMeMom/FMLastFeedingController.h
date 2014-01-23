@@ -1,4 +1,5 @@
 #import <Foundation/Foundation.h>
+#import "JASidePanelController.h"
 
 @interface FMLastFeedingController : UIViewController
 @property (weak, nonatomic) IBOutlet UILabel *lblTotalLength;

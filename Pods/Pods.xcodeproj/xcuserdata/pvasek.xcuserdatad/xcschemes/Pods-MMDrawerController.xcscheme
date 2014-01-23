@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
+   LastUpgradeVersion = "0500"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -13,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "F0E76DBE188348E500F3CFCF"
-               BuildableName = "FeedMeMomTests.xctest"
-               BlueprintName = "FeedMeMomTests"
-               ReferencedContainer = "container:FeedMeMom.xcodeproj">
+               BlueprintIdentifier = "8D95491D2594461D80C4DD67"
+               BuildableName = "libPods-MMDrawerController.a"
+               BlueprintName = "Pods-MMDrawerController"
+               ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -27,16 +28,6 @@
       shouldUseLaunchSchemeArgsEnv = "YES"
       buildConfiguration = "Debug">
       <Testables>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "F0E76DBE188348E500F3CFCF"
-               BuildableName = "FeedMeMomTests.xctest"
-               BlueprintName = "FeedMeMomTests"
-               ReferencedContainer = "container:FeedMeMom.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
       </Testables>
    </TestAction>
    <LaunchAction
