@@ -55,7 +55,7 @@
     _date = value;
     _lblDate.text = [NSDateFormatter
             localizedStringFromDate:value
-                          dateStyle:kCFDateFormatterMediumStyle
+                          dateStyle:NSDateFormatterMediumStyle
                           timeStyle:NSDateFormatterShortStyle];
 
 }
@@ -64,22 +64,23 @@
 - (void) setFeeding:(FMFeedingEntry*) feeding {
     _feeding = feeding;
     _prepare = ^(FMEditFeedingController * ctrl) {
-        ctrl.date = _feeding.date;
-        ctrl.leftMinutes = _feeding.leftBreastLengthMinutes;
-        ctrl.rightMinutes = _feeding.rightBreastLengthMinutes;
+        ctrl.date = feeding.date;
+        ctrl.leftMinutes = feeding.leftBreastLengthMinutes;
+        ctrl.rightMinutes = feeding.rightBreastLengthMinutes;
         ctrl.prepare = nil;
     };
+    FMEditFeedingController *selfPointer = self;
     _doneOk = ^(FMEditFeedingController * ctrl) {
-        _feeding.date = ctrl.date;
-        _feeding.rightBreastLengthMinutes = ctrl.rightMinutes;
-        _feeding.leftBreastLengthMinutes = ctrl.leftMinutes;
+        feeding.date = ctrl.date;
+        feeding.rightBreastLengthMinutes = ctrl.rightMinutes;
+        feeding.leftBreastLengthMinutes = ctrl.leftMinutes;
 
-        if (_feeding.isNew) {
-            [Repository insertFeeding:_feeding];
+        if (feeding.isNew) {
+            [Repository insertFeeding:feeding];
         } else {
-            [Repository updateFeeding:_feeding];
+            [Repository updateFeeding:feeding];
         }
-        [self.navigationController popToRootViewControllerAnimated:YES];
+        [selfPointer.navigationController popToRootViewControllerAnimated:YES];
     };    
 }
 

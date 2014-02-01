@@ -2,6 +2,7 @@
 #import "FMRepository.h"
 #import "FMColors.h"
 #import "Crittercism.h"
+#import "FMNewFeedingController.h"
 
 static NSString *const coderKeyAppVersion = @"appVersion";
 static int const appStateVersion = 1;
@@ -65,9 +66,18 @@ static int const appStateVersion = 1;
     return historyController;
 }
 
++ (UIViewController *)statisticsController {
+    static UIViewController *statisticsController = nil;
+    if (statisticsController == nil) {
+        statisticsController = [FMAppDelegate fromStoryboardWithName:@"statisticsController"];
+        statisticsController.modalTransitionStyle = UIModalTransitionStyleCrossDissolve;
+    }
+    return statisticsController;
+}
+
 - (BOOL)application:(UIApplication *)application shouldSaveApplicationState:(NSCoder *)coder {
     [coder encodeInt:appStateVersion forKey:coderKeyAppVersion];
-    return YES;
+    return [MainNavigationController.topViewController isMemberOfClass:[FMNewFeedingController class]];
 }
 
 - (BOOL)application:(UIApplication *)application shouldRestoreApplicationState:(NSCoder *)coder {

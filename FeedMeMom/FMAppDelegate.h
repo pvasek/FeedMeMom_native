@@ -23,4 +23,5 @@ FMRepository *Repository;
 
 +(UIViewController*) historyController;
 
++ (UIViewController *)statisticsController;
 @end

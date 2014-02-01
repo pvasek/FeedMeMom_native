@@ -24,6 +24,7 @@
 		C5CB6AFFB70F8F9E57C9FDD0 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = C5CB67E7DA44939340C5FC45 /* Podfile */; };
 		C5CB6B5BF9B23B61091570CF /* FMLastFeedingController.m in Sources */ = {isa = PBXBuildFile; fileRef = C5CB6D9ED85CC9B00EF41BC4 /* FMLastFeedingController.m */; };
 		C5CB6C3B41111BF6C6A2BF07 /* FMLengthDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = C5CB6A4E353B58E7EA7279C2 /* FMLengthDataSource.m */; };
+		C5CB6CC79EB1B1DD470C1474 /* FMStatisticsController.m in Sources */ = {isa = PBXBuildFile; fileRef = C5CB68DC64E9C76553B1A26E /* FMStatisticsController.m */; };
 		C5CB6CCC588F28B6C0407CC6 /* FMFeedingEntry.m in Sources */ = {isa = PBXBuildFile; fileRef = C5CB63BB58458C340038AB29 /* FMFeedingEntry.m */; };
 		C5CB6DF6254270B9AE4E5845 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C5CB686D31AAD9E10835E4AF /* InfoPlist.strings */; };
 		C5CB6E706E173F018076F01D /* FMAgo.m in Sources */ = {isa = PBXBuildFile; fileRef = C5CB663530492EFF8F6CD631 /* FMAgo.m */; };
@@ -78,6 +79,7 @@
 		C5CB67B0E7B237F02E2B3A50 /* FMAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMAppDelegate.m; sourceTree = "<group>"; };
 		C5CB67E7DA44939340C5FC45 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		C5CB68B8919F4C9D65598659 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		C5CB68DC64E9C76553B1A26E /* FMStatisticsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMStatisticsController.m; sourceTree = "<group>"; };
 		C5CB68F27B00CD211053A25A /* FMRootController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMRootController.m; sourceTree = "<group>"; };
 		C5CB68F5DFE520786D1FAD70 /* JASidePanelController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JASidePanelController.m; sourceTree = "<group>"; };
 		C5CB69A51C3636F84254A1E1 /* FMAgo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMAgo.h; sourceTree = "<group>"; };
@@ -87,6 +89,7 @@
 		C5CB6A73DC84FC78AB822C1C /* FMRepository.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMRepository.h; sourceTree = "<group>"; };
 		C5CB6AA110D53743D3B76275 /* FMColors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMColors.h; sourceTree = "<group>"; };
 		C5CB6B2D49BF9A68F231F1E4 /* FMLengthSelectorController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMLengthSelectorController.m; sourceTree = "<group>"; };
+		C5CB6B2F7E1E6A85D230CA9E /* FMStatisticsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMStatisticsController.h; sourceTree = "<group>"; };
 		C5CB6BBDDFB9761972E34BBC /* FMUIConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMUIConstants.h; sourceTree = "<group>"; };
 		C5CB6BE2F53CC01B1A7A93D2 /* MainStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MainStoryboard.storyboard; sourceTree = "<group>"; };
 		C5CB6CADCB26AB596557F54C /* FMEditFeedingController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMEditFeedingController.m; sourceTree = "<group>"; };
@@ -271,6 +274,8 @@
 				C5CB6AA110D53743D3B76275 /* FMColors.h */,
 				C5CB6BBDDFB9761972E34BBC /* FMUIConstants.h */,
 				C5CB605803318A136404C03A /* FMUIConstants.m */,
+				C5CB68DC64E9C76553B1A26E /* FMStatisticsController.m */,
+				C5CB6B2F7E1E6A85D230CA9E /* FMStatisticsController.h */,
 			);
 			path = FeedMeMom;
 			sourceTree = "<group>";
@@ -458,6 +463,7 @@
 				C5CB662913281D79C04E5D1A /* FMNewFeedingController.m in Sources */,
 				C5CB61C173113083C286C3D5 /* FMColors.m in Sources */,
 				C5CB6030D6DDD267004FE8D3 /* FMUIConstants.m in Sources */,
+				C5CB6CC79EB1B1DD470C1474 /* FMStatisticsController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

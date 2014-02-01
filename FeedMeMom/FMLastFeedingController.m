@@ -1,6 +1,4 @@
 #import "FMLastFeedingController.h"
-#import "UIViewController+JASidePanel.h"
-#import "JASidePanelController.h"
 #import "FMRootController.h"
 #import "FMAppDelegate.h"
 #import "FMEditFeedingController.h"
@@ -23,12 +21,13 @@
     [super viewDidLoad];
     _btnStartLeft.layer.cornerRadius = FM_DEFAULT_CORNER_RADIUS;
     _btnStartRight.layer.cornerRadius = FM_DEFAULT_CORNER_RADIUS;
+    [NSTimer scheduledTimerWithTimeInterval:60 target:self selector:@selector(updateData) userInfo:nil repeats:YES];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     _lastFeeding = [Repository lastFeeding];
-    [self updateView];
+    [self updateData];
 
     self.mm_drawerController.openDrawerGestureModeMask = MMOpenDrawerGestureModePanningCenterView;
     self.mm_drawerController.closeDrawerGestureModeMask = MMCloseDrawerGestureModePanningCenterView | MMCloseDrawerGestureModeTapCenterView;
@@ -40,24 +39,34 @@
 }
 
 
-- (void)updateView {
+- (void)updateData {
     if (_lastFeeding != nil) {
         _lblTotalLength.text = [NSString stringWithFormat:@"%d %@", _lastFeeding.totalMinutes, NSLocalizedString(@"min", nil)];
         _lblAgo.text = [_lastFeeding agoMinutes];
         _lblAgoTime.text = _lastFeeding.dateTitle;
 
-        if (_lastFeeding.isLeft) {
+        int leftVsRight = _lastFeeding.totalLeftSeconds - _lastFeeding.totalRightSeconds;
+        if (leftVsRight > 0) {
             _btnStartLeft.backgroundColor = Colors.inactiveButtonColor;
             _btnStartRight.backgroundColor = Colors.activeButtonColor;
             _lblRecommendedLeft.hidden = YES;
             _lblRecommendedRight.hidden = NO;
             _lblSide.text = NSLocalizedString(@"LEFT", nil);
-        } else {
+        } else if (leftVsRight < 0) {
             _btnStartLeft.backgroundColor = Colors.activeButtonColor;
             _btnStartRight.backgroundColor = Colors.inactiveButtonColor;
             _lblRecommendedLeft.hidden = NO;
             _lblRecommendedRight.hidden = YES;
             _lblSide.text = NSLocalizedString(@"RIGHT", nil);
+        } else {
+            _btnStartLeft.backgroundColor = Colors.inactiveButtonColor;
+            _btnStartRight.backgroundColor = Colors.inactiveButtonColor;
+            _lblRecommendedLeft.hidden = YES;
+            _lblRecommendedRight.hidden = YES;
+        }
+        if (_lastFeeding.totalLeftSeconds != 0 && _lastFeeding.totalRightSeconds != 0)
+        {
+            _lblSide.text = NSLocalizedString(@"BOTH", nil);
         }
 
     }
@@ -68,7 +77,9 @@
 
     if ([segue.identifier isEqualToString: @"addFeeding"]) {
         FMEditFeedingController *controller = (FMEditFeedingController *)segue.destinationViewController;
-        [controller setFeeding:[[FMFeedingEntry alloc] init]];
+        FMFeedingEntry *feeding = [[FMFeedingEntry alloc] init];
+        feeding.date = [NSDate date];
+        [controller setFeeding:feeding];
     }
 
     if ([segue.identifier isEqualToString: @"editFeeding"] && _lastFeeding) {

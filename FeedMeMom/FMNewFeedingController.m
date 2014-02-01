@@ -87,6 +87,9 @@ static NSString *const ckPausedAt = @"pausedAt";
 }
 
 - (void) updateData {
+    if (_feeding == nil){
+        return;
+    }
     _lblTime.text = _feeding.totalMinutesText;
     _lblLeftTime.text = [_feeding totalLeftMinutesText];
     _lblRightTime.text = [_feeding totalRightMinutesText];
@@ -136,7 +139,7 @@ static NSString *const ckPausedAt = @"pausedAt";
             double tmp = [coder decodeDoubleForKey:ckPausedAt];
             _feeding.pausedAt = [[NSDate alloc] initWithTimeIntervalSinceReferenceDate:tmp];
         }
-        self.isLeft = _feeding.isLeft;
+        self.isLeft = _feeding.isLeft == 1;
     }
 }
 
