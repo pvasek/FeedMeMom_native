@@ -1,5 +1,9 @@
 #import "FMFeedingEntry.h"
 
+const int secPerMinute = 60;
+const int secPerHour = secPerMinute*60;
+const int secPerDay = secPerHour*24;
+
 @implementation FMFeedingEntry {
 @private
     int _id;
@@ -15,6 +19,8 @@
     int _isLeft;
     NSDate *_testNow;
     BOOL _isNew;
+
+
 }
 
 @synthesize id = _id;
@@ -96,6 +102,39 @@
     return [NSString stringWithFormat:@"%d", tmp];
 }
 
+
+- (NSString*)agoMinutes {
+    if (_date == nil) {
+        return @"";
+    }
+    NSTimeInterval diff = [[self now] timeIntervalSinceDate:_date];
+
+    if (diff < 120) {
+        return NSLocalizedString(@"now", nil);
+    }
+    int hours = (int) (diff / secPerHour);
+    diff = diff - hours*secPerHour;
+    int minutes = (int) (diff / 60);
+    return [NSString stringWithFormat:@"%d:%02d", hours, minutes];
+}
+
+- (NSString*) dateTitle {
+    NSDateFormatterStyle dateStyle =  NSDateFormatterNoStyle;
+    if (![self isToday:_date]) {
+        dateStyle =  NSDateFormatterShortStyle;
+    }
+    return [NSDateFormatter localizedStringFromDate:_date dateStyle:dateStyle timeStyle:NSDateFormatterShortStyle];
+}
+
+- (BOOL) isToday:(NSDate*)date {
+    NSDateComponents *otherDay = [[NSCalendar currentCalendar] components:NSEraCalendarUnit|NSYearCalendarUnit|NSMonthCalendarUnit|NSDayCalendarUnit fromDate:date];
+    NSDateComponents *today = [[NSCalendar currentCalendar] components:NSEraCalendarUnit|NSYearCalendarUnit|NSMonthCalendarUnit|NSDayCalendarUnit fromDate:[NSDate date]];
+    return [today day] == [otherDay day] &&
+            [today month] == [otherDay month] &&
+            [today year] == [otherDay year] &&
+            [today era] == [otherDay era];
+}
+
 - (FMAgo*)ago {
     if (_date == nil) {
         return [[FMAgo alloc] init];
@@ -103,15 +142,11 @@
 
     NSTimeInterval diff = [[self now] timeIntervalSinceDate:_date];
 
-    const int secPerMinute = 60;
-    const int secPerHour = secPerMinute*60;
-    const int secPerDay = secPerHour*24;
-
-    int days = diff / secPerDay;
+    int days = (int) (diff / secPerDay);
     diff = diff - days*secPerDay;
-    int hours = diff / secPerHour;
+    int hours = (int) (diff / secPerHour);
     diff = diff - hours*secPerHour;
-    int minutes = diff / 60;
+    int minutes = (int) (diff / 60);
 
     FMAgo *result = [[FMAgo alloc] init];
 

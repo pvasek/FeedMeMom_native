@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "BB37FDBBD9264C35B2870318"
+               BlueprintIdentifier = "FD64BFBF1B974F998D88052F"
                BuildableName = "libPods-Lambda-Alert.a"
                BlueprintName = "Pods-Lambda-Alert"
                ReferencedContainer = "container:Pods.xcodeproj">

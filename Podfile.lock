@@ -1,8 +1,8 @@
 PODS:
-  - FMDB (2.1):
+  - FMDB (2.2):
     - FMDB/standard
-  - FMDB/common (2.1)
-  - FMDB/standard (2.1):
+  - FMDB/common (2.2)
+  - FMDB/standard (2.2):
     - FMDB/common
   - Lambda-Alert (1.0.0)
   - MMDrawerController (0.4.0):
@@ -24,7 +24,7 @@ DEPENDENCIES:
   - MMDrawerController (~> 0.4.0)
 
 SPEC CHECKSUMS:
-  FMDB: 3fd5aaf632ca4ed39e3f101e0398504e6d5b0918
+  FMDB: 97472cfacf0d9e445e915704fb43b4b142799c36
   Lambda-Alert: 16cac975568b71cd2940df8ca9cadb87882baae2
   MMDrawerController: 44baaee6b79487b4681eb61597fb790586909c0c
 

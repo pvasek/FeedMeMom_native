@@ -1,5 +1,7 @@
 #import "FMAppDelegate.h"
 #import "FMRepository.h"
+#import "FMColors.h"
+#import "Crittercism.h"
 
 static NSString *const coderKeyAppVersion = @"appVersion";
 static int const appStateVersion = 1;
@@ -13,7 +15,9 @@ static int const appStateVersion = 1;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    [Crittercism enableWithAppID:@"525e7e6f558d6a55d8000002"];
     Repository = [[FMRepository alloc] initWithDbPath:@"feedingmom_data" debug:true];
+    Colors = [FMColors createBasicSchema];
     return YES;
 }
 
@@ -68,13 +72,11 @@ static int const appStateVersion = 1;
 
 - (BOOL)application:(UIApplication *)application shouldRestoreApplicationState:(NSCoder *)coder {
     return [coder decodeIntForKey:coderKeyAppVersion] == appStateVersion;
-
 }
 
 - (UIViewController *)application:(UIApplication *)application viewControllerWithRestorationIdentifierPath:(NSArray *)identifierComponents coder:(NSCoder *)coder {
-    NSString *resId = identifierComponents.lastObject;
     return nil;
-    //return [FMAppDelegate fromStoryboardWithName:resId];
+
 }
 
 

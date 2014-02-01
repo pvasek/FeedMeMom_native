@@ -9,8 +9,10 @@
 #import <UIKit/UIKit.h>
 
 @class FMRepository;
+@class FMColors;
 
-UINavigationController * MainNavigationController;
+UINavigationController *MainNavigationController;
+FMColors *Colors;
 FMRepository *Repository;
 
 @interface FMAppDelegate : UIResponder <UIApplicationDelegate>

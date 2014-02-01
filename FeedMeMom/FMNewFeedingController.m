@@ -3,6 +3,7 @@
 #import "CCAlertView.h"
 #import "FMFeedingEntry.h"
 #import "FMRepository.h"
+#import "FMUIConstants.h"
 
 
 static NSString *const ckFeedingIncluded = @"feedingIncluded";
@@ -18,10 +19,12 @@ static NSString *const ckPausedAt = @"pausedAt";
 }
 
 - (IBAction)saveFeeding:(id)sender {
-    [self.navigationController popToRootViewControllerAnimated:YES];
     [_feeding stop];
     _feeding.date = [NSDate date];
     [Repository insertFeeding:_feeding];
+    _feeding = nil;
+
+    [self.navigationController popToRootViewControllerAnimated:YES];
 }
 
 - (IBAction)cancelFeeding:(id)sender {
@@ -31,6 +34,7 @@ static NSString *const ckPausedAt = @"pausedAt";
                   message:NSLocalizedString(@"Do you want to cancel this session?", nil)];
 
     [alert addButtonWithTitle:NSLocalizedString(@"Yes", nil) block:^{
+        _feeding = nil;
         [self.navigationController popToRootViewControllerAnimated:YES];
     }];
     [alert addButtonWithTitle:NSLocalizedString(@"No", nil) block:^{
@@ -53,6 +57,9 @@ static NSString *const ckPausedAt = @"pausedAt";
 - (void)viewDidLoad {
     [super viewDidLoad];
 
+    _btnSwitchSides.layer.cornerRadius = FM_DEFAULT_CORNER_RADIUS;
+    _pnlTime.layer.cornerRadius = FM_DEFAULT_CORNER_RADIUS;
+
     NSDictionary *underlineAttribute = @{NSUnderlineStyleAttributeName: @(NSUnderlineStyleSingle)};
     _lblLeftRunning.attributedText = [[NSAttributedString alloc] initWithString:NSLocalizedString(@"left", nil)
                                                                      attributes:underlineAttribute];
@@ -60,7 +67,7 @@ static NSString *const ckPausedAt = @"pausedAt";
                                                                      attributes:underlineAttribute];
 
     _feeding = [[FMFeedingEntry alloc] init];
-    self.isLeft = YES;
+    self.isLeft = _startWithLeft;
     [_feeding start];
     [NSTimer scheduledTimerWithTimeInterval:0.2 target:self selector:@selector(updateData) userInfo:nil repeats:YES];
 }
@@ -93,18 +100,20 @@ static NSString *const ckPausedAt = @"pausedAt";
 
 - (void)encodeRestorableStateWithCoder:(NSCoder *)coder {
     [super encodeRestorableStateWithCoder:coder];
-    [coder encodeBool:true forKey:ckFeedingIncluded];
-    [coder encodeInt:_feeding.isLeft forKey:ckIsLeft];
-    [coder encodeInt:_feeding.rightBreastLengthSeconds forKey:ckRightBreastLengthSeconds];
-    [coder encodeInt:_feeding.leftBreastLengthSeconds forKey:ckLeftBreastLengthSeconds];
-    if (_feeding.leftStartTime != nil) {
-        [coder encodeDouble:_feeding.leftStartTime.timeIntervalSinceReferenceDate forKey:ckLeftStartTime];
-    }
-    if (_feeding.rightStartTime != nil) {
-        [coder encodeDouble:_feeding.rightStartTime.timeIntervalSinceReferenceDate forKey:ckRightStartTime];
-    }
-    if (_feeding.pausedAt != nil) {
-        [coder encodeDouble:_feeding.pausedAt.timeIntervalSinceReferenceDate forKey:ckPausedAt];
+    [coder encodeBool:_feeding != nil forKey:ckFeedingIncluded];
+    if (_feeding != nil) {
+        [coder encodeInt:_feeding.isLeft forKey:ckIsLeft];
+        [coder encodeInt:_feeding.rightBreastLengthSeconds forKey:ckRightBreastLengthSeconds];
+        [coder encodeInt:_feeding.leftBreastLengthSeconds forKey:ckLeftBreastLengthSeconds];
+        if (_feeding.leftStartTime != nil) {
+            [coder encodeDouble:_feeding.leftStartTime.timeIntervalSinceReferenceDate forKey:ckLeftStartTime];
+        }
+        if (_feeding.rightStartTime != nil) {
+            [coder encodeDouble:_feeding.rightStartTime.timeIntervalSinceReferenceDate forKey:ckRightStartTime];
+        }
+        if (_feeding.pausedAt != nil) {
+            [coder encodeDouble:_feeding.pausedAt.timeIntervalSinceReferenceDate forKey:ckPausedAt];
+        }
     }
 }
 
@@ -127,6 +136,7 @@ static NSString *const ckPausedAt = @"pausedAt";
             double tmp = [coder decodeDoubleForKey:ckPausedAt];
             _feeding.pausedAt = [[NSDate alloc] initWithTimeIntervalSinceReferenceDate:tmp];
         }
+        self.isLeft = _feeding.isLeft;
     }
 }
 

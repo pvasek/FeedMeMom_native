@@ -7,7 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C5CB6030D6DDD267004FE8D3 /* FMUIConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = C5CB605803318A136404C03A /* FMUIConstants.m */; };
 		C5CB60D8801242714676F21D /* FMRootController.m in Sources */ = {isa = PBXBuildFile; fileRef = C5CB68F27B00CD211053A25A /* FMRootController.m */; };
+		C5CB61C173113083C286C3D5 /* FMColors.m in Sources */ = {isa = PBXBuildFile; fileRef = C5CB6530DBF9058446DA95AF /* FMColors.m */; };
 		C5CB61CDA02A16B70B801EE4 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C5CB6BE2F53CC01B1A7A93D2 /* MainStoryboard.storyboard */; };
 		C5CB62077CD76E84EADE899C /* FMAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C5CB67B0E7B237F02E2B3A50 /* FMAppDelegate.m */; };
 		C5CB6287AAEBE5B7CB705B87 /* JASidePanelController.m in Sources */ = {isa = PBXBuildFile; fileRef = C5CB68F5DFE520786D1FAD70 /* JASidePanelController.m */; };
@@ -18,6 +20,7 @@
 		C5CB66834B53165B55F70659 /* FMLengthSelectorController.m in Sources */ = {isa = PBXBuildFile; fileRef = C5CB6B2D49BF9A68F231F1E4 /* FMLengthSelectorController.m */; };
 		C5CB672945E6E121828E16CF /* FM_feeding_entry_tests.m in Sources */ = {isa = PBXBuildFile; fileRef = C5CB6DCD27476A5ED7F81735 /* FM_feeding_entry_tests.m */; };
 		C5CB679F3E7B19745C5B6B2A /* FMHistoryRootController.m in Sources */ = {isa = PBXBuildFile; fileRef = C5CB650EFBFC0F130A7C0550 /* FMHistoryRootController.m */; };
+		C5CB6880B5BD83DB3C5CE380 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C5CB68B8919F4C9D65598659 /* SystemConfiguration.framework */; };
 		C5CB6AFFB70F8F9E57C9FDD0 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = C5CB67E7DA44939340C5FC45 /* Podfile */; };
 		C5CB6B5BF9B23B61091570CF /* FMLastFeedingController.m in Sources */ = {isa = PBXBuildFile; fileRef = C5CB6D9ED85CC9B00EF41BC4 /* FMLastFeedingController.m */; };
 		C5CB6C3B41111BF6C6A2BF07 /* FMLengthDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = C5CB6A4E353B58E7EA7279C2 /* FMLengthDataSource.m */; };
@@ -27,6 +30,9 @@
 		C5CB6EC6E00F3B9931894714 /* FMRepository.m in Sources */ = {isa = PBXBuildFile; fileRef = C5CB6FE0F62EA4850072A78C /* FMRepository.m */; };
 		C5CB6F0AA4CC875F570855B4 /* FMEditFeedingController.m in Sources */ = {isa = PBXBuildFile; fileRef = C5CB6CADCB26AB596557F54C /* FMEditFeedingController.m */; };
 		C70756CCB44A48EC92DDBC0F /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B809817AD7C46588CF41DE7 /* libPods.a */; };
+		F0B8C1591898538E00EA8CB3 /* libPods-CrittercismSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F0B8C1581898538E00EA8CB3 /* libPods-CrittercismSDK.a */; };
+		F0D52A28189856F5003C38C0 /* dsym_upload.sh in Resources */ = {isa = PBXBuildFile; fileRef = F0D52A26189856F5003C38C0 /* dsym_upload.sh */; };
+		F0D52A29189856F5003C38C0 /* libCrittercism_v4_3_1.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F0D52A27189856F5003C38C0 /* libCrittercism_v4_3_1.a */; };
 		F0E76DA8188348E500F3CFCF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F0E76DA7188348E500F3CFCF /* Foundation.framework */; };
 		F0E76DAA188348E500F3CFCF /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F0E76DA9188348E500F3CFCF /* CoreGraphics.framework */; };
 		F0E76DAC188348E500F3CFCF /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F0E76DAB188348E500F3CFCF /* UIKit.framework */; };
@@ -53,10 +59,12 @@
 /* Begin PBXFileReference section */
 		9B809817AD7C46588CF41DE7 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		C5CB6057E44EC7D005F3B31D /* FMLengthDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMLengthDataSource.h; sourceTree = "<group>"; };
+		C5CB605803318A136404C03A /* FMUIConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMUIConstants.m; sourceTree = "<group>"; };
 		C5CB624C74494622834C5053 /* FMEditFeedingController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMEditFeedingController.h; sourceTree = "<group>"; };
 		C5CB62D612E5ECDDDA33FAE7 /* FMSideMenuController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMSideMenuController.h; sourceTree = "<group>"; };
 		C5CB63BB58458C340038AB29 /* FMFeedingEntry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMFeedingEntry.m; sourceTree = "<group>"; };
 		C5CB650EFBFC0F130A7C0550 /* FMHistoryRootController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMHistoryRootController.m; sourceTree = "<group>"; };
+		C5CB6530DBF9058446DA95AF /* FMColors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMColors.m; sourceTree = "<group>"; };
 		C5CB6556521A20B7EA248149 /* UIViewController+JASidePanel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+JASidePanel.m"; sourceTree = "<group>"; };
 		C5CB656412B693D2DDDB43F2 /* JASidePanelController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JASidePanelController.h; sourceTree = "<group>"; };
 		C5CB65B71A9B930B4C9D1E1E /* FMDateSelectorController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDateSelectorController.m; sourceTree = "<group>"; };
@@ -68,7 +76,8 @@
 		C5CB673F346C6391B00D9700 /* UIViewController+JASidePanel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+JASidePanel.h"; sourceTree = "<group>"; };
 		C5CB6783DEDCBFD35FEBFBBC /* FMLengthSelectorController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMLengthSelectorController.h; sourceTree = "<group>"; };
 		C5CB67B0E7B237F02E2B3A50 /* FMAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMAppDelegate.m; sourceTree = "<group>"; };
-		C5CB67E7DA44939340C5FC45 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
+		C5CB67E7DA44939340C5FC45 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		C5CB68B8919F4C9D65598659 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		C5CB68F27B00CD211053A25A /* FMRootController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMRootController.m; sourceTree = "<group>"; };
 		C5CB68F5DFE520786D1FAD70 /* JASidePanelController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JASidePanelController.m; sourceTree = "<group>"; };
 		C5CB69A51C3636F84254A1E1 /* FMAgo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMAgo.h; sourceTree = "<group>"; };
@@ -76,7 +85,9 @@
 		C5CB6A3ABA7BA0BDCC1B77B3 /* FMHistoryRootController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMHistoryRootController.h; sourceTree = "<group>"; };
 		C5CB6A4E353B58E7EA7279C2 /* FMLengthDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMLengthDataSource.m; sourceTree = "<group>"; };
 		C5CB6A73DC84FC78AB822C1C /* FMRepository.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMRepository.h; sourceTree = "<group>"; };
+		C5CB6AA110D53743D3B76275 /* FMColors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMColors.h; sourceTree = "<group>"; };
 		C5CB6B2D49BF9A68F231F1E4 /* FMLengthSelectorController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMLengthSelectorController.m; sourceTree = "<group>"; };
+		C5CB6BBDDFB9761972E34BBC /* FMUIConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMUIConstants.h; sourceTree = "<group>"; };
 		C5CB6BE2F53CC01B1A7A93D2 /* MainStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MainStoryboard.storyboard; sourceTree = "<group>"; };
 		C5CB6CADCB26AB596557F54C /* FMEditFeedingController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMEditFeedingController.m; sourceTree = "<group>"; };
 		C5CB6CE9F47B9209F1C098A9 /* FMNewFeedingController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMNewFeedingController.h; sourceTree = "<group>"; };
@@ -86,6 +97,12 @@
 		C5CB6ECF598EFE3CFC9ED2D6 /* en */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = en; path = InfoPlist.strings; sourceTree = "<group>"; };
 		C5CB6FE0F62EA4850072A78C /* FMRepository.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMRepository.m; sourceTree = "<group>"; };
 		F00F60A1188492C8004B0F63 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		F0B8C1581898538E00EA8CB3 /* libPods-CrittercismSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libPods-CrittercismSDK.a"; path = "Pods/build/Release-iphoneos/libPods-CrittercismSDK.a"; sourceTree = "<group>"; };
+		F0D52A23189856F5003C38C0 /* CRFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CRFilter.h; sourceTree = "<group>"; };
+		F0D52A24189856F5003C38C0 /* Crittercism.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Crittercism.h; sourceTree = "<group>"; };
+		F0D52A25189856F5003C38C0 /* CrittercismDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CrittercismDelegate.h; sourceTree = "<group>"; };
+		F0D52A26189856F5003C38C0 /* dsym_upload.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = dsym_upload.sh; sourceTree = "<group>"; };
+		F0D52A27189856F5003C38C0 /* libCrittercism_v4_3_1.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libCrittercism_v4_3_1.a; sourceTree = "<group>"; };
 		F0E76DA4188348E500F3CFCF /* FeedMeMom.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FeedMeMom.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F0E76DA7188348E500F3CFCF /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		F0E76DA9188348E500F3CFCF /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -109,10 +126,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F0D52A29189856F5003C38C0 /* libCrittercism_v4_3_1.a in Frameworks */,
+				F0B8C1591898538E00EA8CB3 /* libPods-CrittercismSDK.a in Frameworks */,
 				F0E76DAA188348E500F3CFCF /* CoreGraphics.framework in Frameworks */,
 				F0E76DAC188348E500F3CFCF /* UIKit.framework in Frameworks */,
 				F0E76DA8188348E500F3CFCF /* Foundation.framework in Frameworks */,
 				C70756CCB44A48EC92DDBC0F /* libPods.a in Frameworks */,
+				C5CB6880B5BD83DB3C5CE380 /* SystemConfiguration.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -170,9 +190,22 @@
 			path = en.lproj;
 			sourceTree = "<group>";
 		};
+		F0D52A22189856F5003C38C0 /* CrittercismSDK */ = {
+			isa = PBXGroup;
+			children = (
+				F0D52A23189856F5003C38C0 /* CRFilter.h */,
+				F0D52A24189856F5003C38C0 /* Crittercism.h */,
+				F0D52A25189856F5003C38C0 /* CrittercismDelegate.h */,
+				F0D52A26189856F5003C38C0 /* dsym_upload.sh */,
+				F0D52A27189856F5003C38C0 /* libCrittercism_v4_3_1.a */,
+			);
+			path = CrittercismSDK;
+			sourceTree = "<group>";
+		};
 		F0E76D9B188348E400F3CFCF = {
 			isa = PBXGroup;
 			children = (
+				F0D52A22189856F5003C38C0 /* CrittercismSDK */,
 				F0E76DAD188348E500F3CFCF /* FeedMeMom */,
 				F0E76DC6188348E500F3CFCF /* FeedMeMomTests */,
 				F0E76DA6188348E500F3CFCF /* Frameworks */,
@@ -194,12 +227,14 @@
 		F0E76DA6188348E500F3CFCF /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F0B8C1581898538E00EA8CB3 /* libPods-CrittercismSDK.a */,
 				F00F60A1188492C8004B0F63 /* QuartzCore.framework */,
 				F0E76DA7188348E500F3CFCF /* Foundation.framework */,
 				F0E76DA9188348E500F3CFCF /* CoreGraphics.framework */,
 				F0E76DAB188348E500F3CFCF /* UIKit.framework */,
 				F0E76DC0188348E500F3CFCF /* XCTest.framework */,
 				9B809817AD7C46588CF41DE7 /* libPods.a */,
+				C5CB68B8919F4C9D65598659 /* SystemConfiguration.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -232,6 +267,10 @@
 				C5CB63C7D7EB21F57C47E1CE /* DataSources */,
 				C5CB66EE2758520F55D0E74B /* FMNewFeedingController.m */,
 				C5CB6CE9F47B9209F1C098A9 /* FMNewFeedingController.h */,
+				C5CB6530DBF9058446DA95AF /* FMColors.m */,
+				C5CB6AA110D53743D3B76275 /* FMColors.h */,
+				C5CB6BBDDFB9761972E34BBC /* FMUIConstants.h */,
+				C5CB605803318A136404C03A /* FMUIConstants.m */,
 			);
 			path = FeedMeMom;
 			sourceTree = "<group>";
@@ -344,6 +383,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F0D52A28189856F5003C38C0 /* dsym_upload.sh in Resources */,
 				F0E76DB2188348E500F3CFCF /* InfoPlist.strings in Resources */,
 				F0E76DBA188348E500F3CFCF /* Images.xcassets in Resources */,
 				C5CB6DF6254270B9AE4E5845 /* InfoPlist.strings in Resources */,
@@ -416,6 +456,8 @@
 				C5CB6C3B41111BF6C6A2BF07 /* FMLengthDataSource.m in Sources */,
 				C5CB6E706E173F018076F01D /* FMAgo.m in Sources */,
 				C5CB662913281D79C04E5D1A /* FMNewFeedingController.m in Sources */,
+				C5CB61C173113083C286C3D5 /* FMColors.m in Sources */,
+				C5CB6030D6DDD267004FE8D3 /* FMUIConstants.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -547,6 +589,10 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "FeedMeMom/FeedMeMom-Prefix.pch";
 				INFOPLIST_FILE = "FeedMeMom/FeedMeMom-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/pvasek/Projects/FeedMeMom_native/CrittercismSDK,
+				);
 				OTHER_LDFLAGS = (
 					"-ObjC",
 					"-lsqlite3",
@@ -567,6 +613,10 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "FeedMeMom/FeedMeMom-Prefix.pch";
 				INFOPLIST_FILE = "FeedMeMom/FeedMeMom-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/pvasek/Projects/FeedMeMom_native/CrittercismSDK,
+				);
 				OTHER_LDFLAGS = (
 					"-ObjC",
 					"-lsqlite3",

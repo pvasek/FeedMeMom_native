@@ -8,7 +8,6 @@
 
 - (void)awakeFromNib {
     [super awakeFromNib];
-    self.openDrawerGestureModeMask = MMOpenDrawerGestureModePanningNavigationBar;
     [self setLeftDrawerViewController:[self.storyboard instantiateViewControllerWithIdentifier:@"sideMenuController"]];
     UIViewController *mainNavigationController = [self.storyboard instantiateViewControllerWithIdentifier:@"mainNavigationController"];
     MainNavigationController = (UINavigationController*)mainNavigationController;

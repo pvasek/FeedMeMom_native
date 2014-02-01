@@ -1,0 +1,1 @@
+int const FM_DEFAULT_CORNER_RADIUS = 4;

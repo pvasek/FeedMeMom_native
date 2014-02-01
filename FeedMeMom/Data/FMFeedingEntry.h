@@ -22,6 +22,7 @@
 @property(nonatomic, readonly) int totalMinutes;
 @property (nonatomic, readonly) int totalSeconds;
 @property (nonatomic, readonly) BOOL isPaused;
+@property (nonatomic, strong, readonly) NSString* dateTitle;
 
 - (int)totalLeftSeconds;
 
@@ -32,6 +33,8 @@
 - (NSString *)totalLeftMinutesText;
 
 - (NSString *)totalRightMinutesText;
+
+- (NSString *)agoMinutes;
 
 - (FMAgo *)ago;
 - (void)setNowForTestDate:(NSDate *)date;
