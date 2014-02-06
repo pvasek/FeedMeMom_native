@@ -107,7 +107,7 @@
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="30"/>
                                 <color key="tintColor" white="0.91238024640000004" alpha="1" colorSpace="calibratedWhite"/>
                                 <state key="normal" title="Right">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="0.80000000000000004" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <state key="highlighted">
@@ -125,7 +125,9 @@
                                     <constraint firstAttribute="width" constant="127" id="iGO-Y0-RQO"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="30"/>
-                                <state key="normal" title="Left"/>
+                                <state key="normal" title="Left">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="0.80000000000000004" colorSpace="calibratedRGB"/>
+                                </state>
                                 <connections>
                                     <segue destination="SC1-T1-AWu" kind="push" identifier="newLeftFeeding" id="Cgy-Bf-X0s"/>
                                 </connections>
@@ -150,7 +152,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="QUl-iL-vy9" firstAttribute="top" secondItem="a1B-1Y-b4J" secondAttribute="bottom" constant="13" id="0Og-EI-dmm"/>
@@ -193,6 +195,7 @@
                         <outlet property="lblRecommendedRight" destination="3Ll-0x-yrr" id="zrD-aZ-Rax"/>
                         <outlet property="lblSide" destination="gah-bX-ACn" id="8r5-50-Lxa"/>
                         <outlet property="lblTotalLength" destination="zhO-q7-mDg" id="fGW-UA-cCN"/>
+                        <outlet property="pnlTimes" destination="Kai-lm-xpA" id="twG-LE-UPi"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kS1-Ik-TnF" userLabel="First Responder" sceneMemberID="firstResponder"/>

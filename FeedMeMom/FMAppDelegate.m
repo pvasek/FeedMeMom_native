@@ -17,11 +17,18 @@ static int const appStateVersion = 1;
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     [Crittercism enableWithAppID:@"525e7e6f558d6a55d8000002"];
+    LightColors = [FMColors createLightSchema];
+    DarkColors = [FMColors createDarkSchema];
+    Colors = LightColors;
     Repository = [[FMRepository alloc] initWithDbPath:@"feedingmom_data" debug:true];
-    Colors = [FMColors createBasicSchema];
     return YES;
 }
 
+
+- (void)dealloc {
+    DarkColors = nil;
+    LightColors = nil;
+}
 
 - (void)applicationWillResignActive:(UIApplication *)application
 {

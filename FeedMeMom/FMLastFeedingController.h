@@ -10,5 +10,7 @@
 @property (weak, nonatomic) IBOutlet UIButton *btnStartLeft;
 @property (weak, nonatomic) IBOutlet UILabel *lblSide;
 @property (weak, nonatomic) IBOutlet UILabel *lblAgoTime;
+@property (weak, nonatomic) IBOutlet UIView *pnlTimes;
 
+- (void)updateColors;
 @end

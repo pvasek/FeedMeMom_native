@@ -22,15 +22,25 @@
     _btnStartLeft.layer.cornerRadius = FM_DEFAULT_CORNER_RADIUS;
     _btnStartRight.layer.cornerRadius = FM_DEFAULT_CORNER_RADIUS;
     [NSTimer scheduledTimerWithTimeInterval:60 target:self selector:@selector(updateData) userInfo:nil repeats:YES];
+    [FMColors notifyMeAboutChange:^(){
+        [self updateColors];
+    }];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     _lastFeeding = [Repository lastFeeding];
     [self updateData];
+    [self updateColors];
 
     self.mm_drawerController.openDrawerGestureModeMask = MMOpenDrawerGestureModePanningCenterView;
     self.mm_drawerController.closeDrawerGestureModeMask = MMCloseDrawerGestureModePanningCenterView | MMCloseDrawerGestureModeTapCenterView;
+}
+
+- (void)updateColors {
+    self.view.backgroundColor = Colors.background;
+    self.pnlTimes.backgroundColor = Colors.baseColor;
+    [self updateData];
 }
 
 - (void)viewWillDisappear:(BOOL)animated {

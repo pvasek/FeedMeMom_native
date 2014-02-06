@@ -18,9 +18,6 @@ const int secPerDay = secPerHour*24;
     NSDate *_pausedAt;
     int _isLeft;
     NSDate *_testNow;
-    BOOL _isNew;
-
-
 }
 
 @synthesize id = _id;

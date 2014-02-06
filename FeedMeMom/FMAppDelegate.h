@@ -13,6 +13,9 @@
 
 UINavigationController *MainNavigationController;
 FMColors *Colors;
+FMColors *LightColors;
+FMColors *DarkColors;
+
 FMRepository *Repository;
 
 @interface FMAppDelegate : UIResponder <UIApplicationDelegate>

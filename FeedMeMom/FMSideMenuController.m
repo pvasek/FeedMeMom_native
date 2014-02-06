@@ -3,6 +3,8 @@
 #import "JASidePanelController.h"
 #import "FMAppDelegate.h"
 #import "UIViewController+MMDrawerController.h"
+#import "FMColors.h"
+#import "FMLastFeedingController.h"
 
 @implementation FMSideMenuController {
 
@@ -27,6 +29,11 @@
         UIViewController *statistics = [FMAppDelegate statisticsController];
         [MainNavigationController pushViewController:statistics animated:NO];
         [self.mm_drawerController closeDrawerAnimated:NO completion:^(BOOL finished) {}];
+    }
+
+    if (indexPath.row == 2) {
+        [FMColors switchColorScheme];
+        MainNavigationController.navigationBar.barTintColor = Colors.navigationBarColor;
     }
 }
 
