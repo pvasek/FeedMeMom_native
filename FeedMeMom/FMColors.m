@@ -42,6 +42,7 @@ FMAction _callback;
     result.background = [UIColor whiteColor];
     result.baseColor = [[UIColor alloc] initWithRed:176/256.0 green:33/256.0 blue:87/256.0 alpha:1];
     result.inactiveColor = [[UIColor alloc] initWithRed:0 green:0 blue:0 alpha:0.3];
+    result.panelsColor = [[UIColor alloc] initWithRed:234/256.0 green:234/256.0 blue:234/256.0 alpha:1];
     return result;
 }
 
@@ -49,9 +50,10 @@ FMAction _callback;
 
     FMColors *result = [[FMColors alloc] init];
     result.type = FMColorTypeDark;
-    result.background = [self hexColor:0x555555];
     result.baseColor = [self hexColor:0x333333];
+    result.background = [self hexColor:0x444444];
     result.inactiveColor = [[UIColor alloc] initWithRed:0 green:0 blue:0 alpha:0.3];
+    result.panelsColor = [self hexColor:0x555555];
     return result;
 }
 

@@ -1,4 +1,6 @@
 #import "FMDateSelectorController.h"
+#import "FMAppDelegate.h"
+#import "FMColors.h"
 
 
 @implementation FMDateSelectorController {
@@ -19,6 +21,11 @@
     if (_done != nil) {
         _done(self);
     }
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    self.view.backgroundColor = Colors.background;
 }
 
 @end

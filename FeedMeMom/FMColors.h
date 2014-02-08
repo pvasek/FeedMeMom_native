@@ -20,6 +20,8 @@ typedef enum {
 @property (nonatomic, readonly) UIColor *navigationBarColor;
 
 
+@property(nonatomic, strong) UIColor *panelsColor;
+
 + (void)notifyMeAboutChange:(FMAction)callback;
 
 + (void)switchColorScheme;

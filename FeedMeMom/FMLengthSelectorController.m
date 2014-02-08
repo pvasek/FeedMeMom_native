@@ -1,5 +1,7 @@
 #import "FMLengthSelectorController.h"
 #import "FMLengthDataSource.h"
+#import "FMAppDelegate.h"
+#import "FMColors.h"
 
 
 @implementation FMLengthSelectorController {
@@ -21,8 +23,9 @@
     if (_prepare != nil) {
         _prepare(self);
     }
-}
 
+    self.view.backgroundColor = Colors.background;
+}
 
 - (NSInteger)value {
     return [_pickupSelector selectedRowInComponent:0];
@@ -38,6 +41,7 @@
     if (_done != nil) {
         _done(self);
     }
+
 }
 
 

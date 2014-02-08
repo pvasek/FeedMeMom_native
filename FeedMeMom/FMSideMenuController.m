@@ -20,20 +20,22 @@
         [self.sidePanelController showCenterPanelAnimated:YES];
         UIViewController *history = [FMAppDelegate historyController];
         [self.mm_drawerController closeDrawerAnimated:NO completion:^(BOOL finished) {
-            [MainNavigationController pushViewController:history animated:YES];
+            [MainNavigationController pushViewController:history animated:NO];
         }];
     }
 
     if (indexPath.row == 1) {
         [self.sidePanelController showCenterPanelAnimated:YES];
         UIViewController *statistics = [FMAppDelegate statisticsController];
-        [MainNavigationController pushViewController:statistics animated:NO];
-        [self.mm_drawerController closeDrawerAnimated:NO completion:^(BOOL finished) {}];
+        [self.mm_drawerController closeDrawerAnimated:NO completion:^(BOOL finished) {
+            [MainNavigationController pushViewController:statistics animated:NO];
+        }];
     }
 
     if (indexPath.row == 2) {
         [FMColors switchColorScheme];
         MainNavigationController.navigationBar.barTintColor = Colors.navigationBarColor;
+        [self.mm_drawerController closeDrawerAnimated:YES completion:^(BOOL finished) {}];
     }
 }
 

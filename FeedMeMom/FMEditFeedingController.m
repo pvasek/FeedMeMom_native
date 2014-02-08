@@ -5,6 +5,7 @@
 #import "FMAppDelegate.h"
 #import "FMRepository.h"
 #import "CCAlertView.h"
+#import "FMColors.h"
 
 @implementation FMEditFeedingController {
     NSDate* _date;
@@ -48,6 +49,8 @@
     }
 
     _btnDeleteFeeding.hidden = _feeding.isNew;
+
+    self.view.backgroundColor = Colors.background;
 }
 
 

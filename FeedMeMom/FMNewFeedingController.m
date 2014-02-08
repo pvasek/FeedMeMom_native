@@ -4,6 +4,7 @@
 #import "FMFeedingEntry.h"
 #import "FMRepository.h"
 #import "FMUIConstants.h"
+#import "FMColors.h"
 
 
 static NSString *const ckFeedingIncluded = @"feedingIncluded";
@@ -141,6 +142,13 @@ static NSString *const ckPausedAt = @"pausedAt";
         }
         self.isLeft = _feeding.isLeft == 1;
     }
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    self.view.backgroundColor = Colors.background;
+    self.btnSwitchSides.backgroundColor = Colors.activeButtonColor;
+    self.pnlTime.backgroundColor = Colors.panelsColor;
 }
 
 
