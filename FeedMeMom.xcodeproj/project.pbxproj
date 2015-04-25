@@ -597,7 +597,7 @@
 				INFOPLIST_FILE = "FeedMeMom/FeedMeMom-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					/Users/pvasek/Projects/FeedMeMom_native/CrittercismSDK,
+					/Users/pvasek/Develop/projects/FeedMeMom_native/CrittercismSDK,
 				);
 				OTHER_LDFLAGS = (
 					"-ObjC",
@@ -621,7 +621,7 @@
 				INFOPLIST_FILE = "FeedMeMom/FeedMeMom-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					/Users/pvasek/Projects/FeedMeMom_native/CrittercismSDK,
+					/Users/pvasek/Develop/projects/FeedMeMom_native/CrittercismSDK,
 				);
 				OTHER_LDFLAGS = (
 					"-ObjC",
